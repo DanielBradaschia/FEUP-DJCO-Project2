@@ -4,35 +4,54 @@ public class FireBall : MonoBehaviour
 {
     public Rigidbody rigid;
 
-    public float maxDistance = 60f;
+    public float delay = 5f;
     public float speed = 10f;
+    public float radius = 2f;
+    public float force = 200f;
 
-    Vector3 initPosition;
+    public GameObject explosion;
+
+    float countdown;
+    bool hasExploded = false;
 
     void Start()
     {
         rigid.velocity = transform.forward * speed;
 
-        initPosition = transform.position;
+        countdown = delay;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if(Vector3.Distance(initPosition, transform.position) >= 30f)
+        countdown -= Time.deltaTime;
+        if(countdown <= 0f && !hasExploded)
         {
+            hasExploded = true;
             Explode();
         }
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        hasExploded = true;
         Explode();
     }
 
     void Explode()
     {
-        Debug.Log("EXPLOSION");
+        Instantiate(explosion, transform.position, transform.rotation);
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+
+        foreach(Collider nearbyObj in colliders)
+        {
+            Rigidbody rb = nearbyObj.GetComponent<Rigidbody>();
+            if(rb != null)
+            {
+                rb.AddExplosionForce(force, transform.position, radius);
+            }
+        }
+        
         Destroy(gameObject);
     }
 }

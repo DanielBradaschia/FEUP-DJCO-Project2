@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MagicController : MonoBehaviour
@@ -9,9 +7,7 @@ public class MagicController : MonoBehaviour
 
     float activeElement = 1f;
 
-
-
-    // Update is called once per frame
+    
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Q))
