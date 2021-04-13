@@ -3,6 +3,7 @@ using UnityEngine;
 public class MagicController : MonoBehaviour
 {
     public CharacterBehaviour Player;
+    public ThirdPersonMovement characterMovement;
     public GameObject Fireball;
     public Transform cam;
     public float fireBallCooldown = 5f;
@@ -16,6 +17,7 @@ public class MagicController : MonoBehaviour
     {
         fbCooldown = fireBallCooldown;
         whCooldown = waterHealCooldown;
+        characterMovement = GameObject.FindObjectOfType<ThirdPersonMovement>();
     }
 
     void Update()
@@ -38,5 +40,12 @@ public class MagicController : MonoBehaviour
         {
             Player.Heal(20f);
         }
+
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            characterMovement.HandleDash();
+        }
+        
     }
 }

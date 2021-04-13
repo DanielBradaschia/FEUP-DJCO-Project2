@@ -20,6 +20,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    private Vector3 lastMove;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -48,6 +50,9 @@ public class ThirdPersonMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
+
+            lastMove = moveDir;
+
         }
 
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -58,5 +63,12 @@ public class ThirdPersonMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void HandleDash()
+    {
+        float dashDistance = 50f;
+
+        controller.Move(lastMove * speed * dashDistance * Time.deltaTime);
     }
 }
