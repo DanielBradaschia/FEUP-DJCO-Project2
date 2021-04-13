@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637529723940518744
+      ticks: 637530688261049654
     m_Hash: 2437792724
   m_LockFileStatus:
     m_FilePath: D:/Users/Joao/Desktop/DJCO/FEUP-DJCO-Project2/Magic Test/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637529723956993358
+      ticks: 637537413130336770
     m_Hash: 2066512631
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -80,6 +80,7 @@ m_PackageAssets:
         - 2.7.1
         - 2.7.2
         - 2.7.3
+        - 2.8.0-exp.1
         compatible:
         - 2.5.0
         - 2.6.0-preview.2
@@ -97,6 +98,7 @@ m_PackageAssets:
         - 2.7.1
         - 2.7.2
         - 2.7.3
+        - 2.8.0-exp.1
         verified: 2.6.4
       dependencies: []
       resolvedDependencies: []

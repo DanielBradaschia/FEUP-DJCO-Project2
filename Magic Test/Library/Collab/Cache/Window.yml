@@ -14,26 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Fire_01.tga
-    - Assets/Fire_01.tga.meta
+    - Assets/Magic/Fire/Explosion.prefab
+    - Assets/Magic/Fire/Explosion.prefab.meta
     - Assets/Magic/Fire/Fireball.prefab
-    - Assets/New Material 1.mat
-    - Assets/New Material 1.mat.meta
-    - Assets/New Material.mat
-    - Assets/New Material.mat.meta
-    - Assets/Scenes/TestScene.unity
-    - Assets/Scenes/TestScene.unity.meta
+    - Assets/Scenes/SampleScene.unity.meta
     - Assets/Scenes/TestSceneSettings.lighting
     - Assets/Scenes/TestSceneSettings.lighting.meta
     - Assets/Scripts/Magic/FireBall.cs
     - Assets/Scripts/Player/MagicController.cs
-    - Assets/Scripts/Player/MagicController.cs.meta
-    - Assets/lava.jpg
-    - Assets/lava.jpg.meta
-    - Packages/manifest.json
-    - Packages/packages-lock.json
     - 
-    m_Values: 00000000000000000000000000000000000000
+    m_Values: 000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
