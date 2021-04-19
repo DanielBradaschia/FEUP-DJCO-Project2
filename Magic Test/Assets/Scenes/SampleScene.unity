@@ -1561,7 +1561,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863388321}
-  m_LocalRotation: {x: 0.086049825, y: 0.0000000042856407, z: -3.7015155e-10, w: 0.99629086}
+  m_LocalRotation: {x: 0.086049825, y: -0.0000000042856403, z: 3.7015152e-10, w: 0.99629086}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1655,7 +1655,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899472734}
-  m_LocalRotation: {x: 0.10410983, y: -0.000000017112876, z: 0.0000000017913534, w: 0.99456584}
+  m_LocalRotation: {x: 0.10410983, y: 0.00000001711288, z: -0.0000000017913537, w: 0.99456584}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2989,9 +2989,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201605ed850afa14689758584207144b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  characterMovement: {fileID: 0}
   Fireball: {fileID: 2914348448707838298, guid: a4f1ee9aafe6ac049b30626a14ce866e,
     type: 3}
+  Earthwall: {fileID: 5524251130483860020, guid: 80e43ce763391244a9e9537b5f36dc50,
+    type: 3}
   cam: {fileID: 1604866158}
+  fireBallCooldown: 5
+  waterHealCooldown: 10
+  earthWallCooldown: 5
 --- !u!1 &1595590001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2615453208677245630, guid: b853ffbfa1e37e444b4ec3bfdeb0ddda,
@@ -3133,7 +3140,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604866157}
-  m_LocalRotation: {x: 0.10410984, y: -0.000000035018736, z: 0.000000003665715, w: 0.99456584}
+  m_LocalRotation: {x: 0.10410984, y: 0.000000035018736, z: -0.000000003665715, w: 0.99456584}
   m_LocalPosition: {x: 0, y: 2.4999998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
