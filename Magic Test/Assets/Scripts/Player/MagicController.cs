@@ -16,17 +16,20 @@ public class MagicController : MonoBehaviour
     public float fireBallCooldown = 5f;
     public float waterHealCooldown = 10f;
     public float earthWallCooldown = 5f;
+    public float airDashCooldown = 5f;
 
     float activeElement = 1f;
     float fbCooldown;
     float whCooldown;
     float ewCooldown;
+    float adCooldown;
 
     void Start()
     {
         fbCooldown = fireBallCooldown;
         whCooldown = waterHealCooldown;
         ewCooldown = earthWallCooldown;
+        adCooldown = airDashCooldown;
         characterMovement = GameObject.FindObjectOfType<ThirdPersonMovement>();
     }
 
@@ -34,6 +37,7 @@ public class MagicController : MonoBehaviour
     {
         fbCooldown -= Time.deltaTime;
         whCooldown -= Time.deltaTime;
+        adCooldown -= Time.deltaTime;
 
         //Fireball
         if (Input.GetKeyDown(KeyCode.Q) && fbCooldown <= 0f)
@@ -48,12 +52,14 @@ public class MagicController : MonoBehaviour
         //Water Heal
         if (Input.GetKeyDown(KeyCode.F) && whCooldown <= 0f)
         {
+            whCooldown = waterHealCooldown;
             Player.Heal(20f);
         }
 
 
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && adCooldown <= 0f)
         {
+            adCooldown = airDashCooldown;
             characterMovement.HandleDash();
         }
 
