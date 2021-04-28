@@ -8,6 +8,7 @@ public class MagicController : MonoBehaviour
 
     public GameObject Fireball;
     public GameObject Earthwall;
+    public GameObject Waterheal;
 
     public Transform cam;
     
@@ -66,6 +67,7 @@ public class MagicController : MonoBehaviour
             symbolsImage[3].StartCooldown(waterHealCooldown);
 
             whCooldown = waterHealCooldown;
+            GameObject waterheal = Instantiate(Waterheal, transform.position, Quaternion.Euler(0f, 0f, 0f), this.transform);
             Player.Heal(20f);
         }
 
