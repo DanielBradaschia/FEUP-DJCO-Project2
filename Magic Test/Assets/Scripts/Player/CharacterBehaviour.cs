@@ -1,23 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterBehaviour : MonoBehaviour
 {
     public float maxHealth = 100f;
+    public PlayerHealthBar phb;
 
-    private float hp;
+    float hp;
     
-    // Start is called before the first frame update
     void Start()
     {
-        hp = maxHealth;        
+        hp = maxHealth;
+        phb.SetHealth(hp, maxHealth);
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.L))
+            TakeDamage(10f);
     }
 
     public float getHp()
@@ -25,10 +24,20 @@ public class CharacterBehaviour : MonoBehaviour
         return hp;
     }
 
+    public void TakeDamage(float value)
+    {
+        hp -= value;
+        
+        phb.SetHealth(hp, maxHealth);
+    }
+
     public void Heal(float value) 
     {
-        if (hp < maxHealth)
+        if ((hp + value) < maxHealth)
             hp += value;
-        //Debug.Log(hp);
+        else
+            hp = maxHealth;
+
+        phb.SetHealth(hp, maxHealth);
     }
 }

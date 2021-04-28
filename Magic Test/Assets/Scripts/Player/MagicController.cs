@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MagicController : MonoBehaviour
 {
@@ -24,13 +25,21 @@ public class MagicController : MonoBehaviour
     float ewCooldown;
     float adCooldown;
 
+    public GameObject MagicSymbols;
+
+    MagicSymbol[] symbolsImage;
+
     void Start()
     {
-        fbCooldown = fireBallCooldown;
-        whCooldown = waterHealCooldown;
-        ewCooldown = earthWallCooldown;
-        adCooldown = airDashCooldown;
+        fbCooldown = 0f;
+        whCooldown = 0f;
+        ewCooldown = 0f;
+        adCooldown = 0f;
         characterMovement = GameObject.FindObjectOfType<ThirdPersonMovement>();
+
+        symbolsImage = MagicSymbols.GetComponentsInChildren<MagicSymbol>();
+
+        
     }
 
     void Update()
@@ -42,6 +51,8 @@ public class MagicController : MonoBehaviour
         //Fireball
         if (Input.GetKeyDown(KeyCode.Q) && fbCooldown <= 0f)
         {
+            symbolsImage[1].StartCooldown(fireBallCooldown);
+
             fbCooldown = fireBallCooldown;
 
             Vector3 offset = transform.forward;
@@ -52,6 +63,8 @@ public class MagicController : MonoBehaviour
         //Water Heal
         if (Input.GetKeyDown(KeyCode.F) && whCooldown <= 0f)
         {
+            symbolsImage[3].StartCooldown(waterHealCooldown);
+
             whCooldown = waterHealCooldown;
             Player.Heal(20f);
         }
@@ -59,6 +72,8 @@ public class MagicController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && adCooldown <= 0f)
         {
+            symbolsImage[0].StartCooldown(airDashCooldown);
+
             adCooldown = airDashCooldown;
             characterMovement.HandleDash();
         }
@@ -72,6 +87,8 @@ public class MagicController : MonoBehaviour
         ewCooldown -= Time.deltaTime;
         if(Input.GetKeyDown(KeyCode.E) && ewCooldown <= 0f)
         {
+            symbolsImage[2].StartCooldown(earthWallCooldown);
+
             Vector3 offset = cam.forward * 5;
             offset.y=0;
             GetComponent<ThirdPersonMovement>().enabled = false;

@@ -22,6 +22,8 @@ public class ThirdPersonMovement : MonoBehaviour
     public float jumpHeight = 3f;
     private Vector3 lastMove;
 
+    public float dashDistance = 100f;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -67,8 +69,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public void HandleDash()
     {
-        float dashDistance = 50f;
-
         controller.Move(lastMove * speed * dashDistance * Time.deltaTime);
     }
 }
