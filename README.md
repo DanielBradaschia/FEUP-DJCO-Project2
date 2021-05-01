@@ -1,23 +1,21 @@
 # FEUP-DJCO-Project2
 
 ## TO DO - dev
-- [ ] 4 initial magics
-- [ ] UI
+- [x] 4 initial magics
+- [x] UI
 - [ ] Air boss (Boza)
 - [ ] Smooth camera movement
 
 ### 4 initial magics
-- [ ] (Fire) Fireball
-- [ ] (Water) Heal
-- [ ] (Air) Dash
-- [ ] (Earth) Wall
+- [x] (Fire) Fireball
+- [x] (Water) Heal
+- [x] (Air) Dash
+- [x] (Earth) Wall
 
 ### UI
-- [ ] Health Bar
-- [ ] Mana Bar
-- [ ] Magic symbols
-- [ ] Magic cooldown
-- [ ] Magic wheel
+- [x] Health Bar
+- [x] Magic symbols
+- [x] Magic cooldown
 
 ### Air boss Boza
 - [ ] Attacks
