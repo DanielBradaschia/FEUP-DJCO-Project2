@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8db628fa-819c-45d5-98a3-ca79cdbaab6d}">
+		<property name="assetPath">
+			<value>319412__pushkin__cat-irritated-meow.flac</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>20.485215419501134</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3c89ee4d-9da5-412f-9be0-f47e53a2a38e}</destination>
+		</relationship>
+	</object>
+</objects>
