@@ -19,7 +19,7 @@ public class MagicController : MonoBehaviour
     public float earthWallCooldown = 5f;
     public float airDashCooldown = 5f;
 
-    float activeElement = 1f;
+
     float fbCooldown;
     float whCooldown;
     float ewCooldown;
@@ -28,6 +28,7 @@ public class MagicController : MonoBehaviour
     public GameObject MagicSymbols;
 
     MagicSymbol[] symbolsImage;
+    
 
     void Start()
     {
@@ -38,7 +39,6 @@ public class MagicController : MonoBehaviour
         characterMovement = GameObject.FindObjectOfType<ThirdPersonMovement>();
 
         symbolsImage = MagicSymbols.GetComponentsInChildren<MagicSymbol>();
-
         
     }
 
@@ -63,7 +63,7 @@ public class MagicController : MonoBehaviour
         {
             symbolsImage[1].StartCooldown(fireBallCooldown);
             fbCooldown = fireBallCooldown;
-
+            
             Vector3 offset = transform.forward;
             
             GameObject fireball = Instantiate(Fireball, transform.position + offset, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));

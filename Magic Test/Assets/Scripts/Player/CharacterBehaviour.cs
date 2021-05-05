@@ -6,15 +6,33 @@ public class CharacterBehaviour : MonoBehaviour
     public PlayerHealthBar phb;
 
     float hp;
-    
+
+    bool healing;
+    float healingAmount;
+
     void Start()
     {
         hp = maxHealth;
         phb.SetHealth(hp, maxHealth);
+        healing = false;
     }
     
     void Update()
     {
+        if(healing)
+        {
+            if ((hp + Time.deltaTime) < maxHealth && healingAmount > 0)
+            {
+                hp += 0.05f;
+                healingAmount -= 0.05f;
+            }
+            else
+                healing = false;
+
+            phb.SetHealth(hp, maxHealth);
+        }
+
+
         if (Input.GetKeyDown(KeyCode.L))
             TakeDamage(10f);
     }
@@ -33,11 +51,8 @@ public class CharacterBehaviour : MonoBehaviour
 
     public void Heal(float value) 
     {
-        if ((hp + value) < maxHealth)
-            hp += value;
-        else
-            hp = maxHealth;
-
-        phb.SetHealth(hp, maxHealth);
+        healing = true;
+        healingAmount = value;
+        
     }
 }
