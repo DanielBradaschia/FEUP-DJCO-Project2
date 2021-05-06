@@ -71,4 +71,5 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         controller.Move(lastMove * speed * dashDistance * Time.deltaTime);
     }
+
 }
