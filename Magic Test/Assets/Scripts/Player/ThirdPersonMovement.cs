@@ -22,14 +22,19 @@ public class ThirdPersonMovement : MonoBehaviour
     public float jumpHeight = 3f;
     private Vector3 lastMove;
 
-    public float dashDistance = 100f;
+    public float dashDistance = 5f;
+
+    public Transform followTarget;
+
+    float velocityY = 0;
+    public float cameraSpeed = 200f;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    /*void Update()
     {
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -65,6 +70,54 @@ public class ThirdPersonMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }*/
+    void Update()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        velocityY += gravity * Time.deltaTime;
+ 
+        Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        input = input.normalized;
+ 
+        Vector3 temp = Vector3.zero;
+        if (input.z > 0)
+        {
+            temp += followTarget.forward;
+        }
+        else if (input.z < 0)
+        {
+            temp += followTarget.forward * -1;
+        }
+ 
+        if (input.x > 0)
+        {
+            temp += followTarget.right;
+        }
+        else if (input.x < 0)
+        {
+            temp += followTarget.right * -1;
+        }
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+ 
+        Vector3 velocity = temp * speed;
+        velocity.y = velocityY;
+     
+        controller.Move(velocity * Time.deltaTime);
+
+        lastMove = velocity;
+ 
+        if (controller.isGrounded)
+        {
+            velocityY = 0;
+        }
+
+        followTarget.Rotate(new Vector3(-Input.GetAxis("Mouse Y"), 0, 0) * Time.deltaTime * cameraSpeed);
+        transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.deltaTime * cameraSpeed);
     }
 
     public void HandleDash()
