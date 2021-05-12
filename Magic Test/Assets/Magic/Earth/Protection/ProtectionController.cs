@@ -4,16 +4,17 @@ public class ProtectionController : Magic
 {
     public float cooldown = 12f;
 
-    GameObject player;
+    public GameObject player;
+
     ThirdPersonMovement mov;
     CharacterBehaviour ch;
     GameObject clone;
-    
     float timer = 5f;
+    bool isLearned = false;
 
     void Start()
     {
-        player = GameObject.Find("Player");
+        
 
         mov = player.GetComponent<ThirdPersonMovement>();
 
@@ -37,13 +38,18 @@ public class ProtectionController : Magic
 
     public override void Activate()
     {
+        player = GameObject.Find("Player");
+
         clone = Instantiate(gameObject, player.transform.position, Quaternion.Euler(0f, 0f, 0f), player.transform);
     }
     
-
     public override float GetCooldown()
     {
         return cooldown;
     }
-    
+
+    public override bool getLearned()
+    {
+        return isLearned;
+    }
 }

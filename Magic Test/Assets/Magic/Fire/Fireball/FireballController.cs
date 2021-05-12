@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class FireballController : Magic
 {
+    public float cooldown = 5f;
+
     Transform cam;
     GameObject player;
-
-    public float cooldown = 5f;
+    bool isLearned = true;
 
     public override void Activate()
     {
@@ -20,5 +21,10 @@ public class FireballController : Magic
     public override float GetCooldown()
     {
         return cooldown;
+    }
+
+    public override bool getLearned()
+    {
+        return isLearned;
     }
 }

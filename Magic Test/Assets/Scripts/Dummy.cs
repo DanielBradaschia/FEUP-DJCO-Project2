@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Dummy : MonoBehaviour
 {
-    float maxHp = 9999999;
-    float hp;
+    float accumulatedDamage;
 
     float counter = 5f;
 
+    public TMP_Text damageText;
+
     private void Start()
     {
-        hp = maxHp;
+        accumulatedDamage = 0f;
+        damageText.text = "";
     }
     
     void Update()
@@ -18,19 +22,16 @@ public class Dummy : MonoBehaviour
         if(counter <= 0)
         {
             counter = 5f;
-            Heal();
+            accumulatedDamage = 0f;
+            damageText.text = "";
         }
     }
 
-    
-
     public void Dmg(float damage)
     {
-        Debug.Log("I'm taking " + damage + " damage");
+        accumulatedDamage += damage;
+        counter = 5f;
+        damageText.text = accumulatedDamage.ToString();
     }
-
-    void Heal()
-    {
-        hp = maxHp;
-    }
+    
 }

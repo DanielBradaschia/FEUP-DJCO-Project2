@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MagicControllerV2 : MonoBehaviour
+public class MagicController : MonoBehaviour
 {
     public Magic[] selectedMagics;
 
@@ -37,7 +37,7 @@ public class MagicControllerV2 : MonoBehaviour
             symbolsImage[1].StartCooldown(mcd[1]);
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && mcd[2] <= 0)
+        if (Input.GetKeyDown(KeyCode.V) && mcd[2] <= 0)
         {
             selectedMagics[2].Activate();
             mcd[2] = selectedMagics[2].GetCooldown();
@@ -50,6 +50,11 @@ public class MagicControllerV2 : MonoBehaviour
             mcd[3] = selectedMagics[3].GetCooldown();
             symbolsImage[3].StartCooldown(mcd[3]);
         }
+    }
+
+    public Magic[] GetMagics()
+    {
+        return selectedMagics;
     }
 
     public void SwapMagic(int position, Magic magic)

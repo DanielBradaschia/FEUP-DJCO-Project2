@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WaterHealController : Magic
 {
+    public float cooldown = 15f;
 
     GameObject player;
-
-    public float cooldown = 15f;
+    bool isLearned = true;
 
     public override void Activate()
     {
@@ -23,5 +23,10 @@ public class WaterHealController : Magic
     public override float GetCooldown()
     {
         return cooldown;
+    }
+
+    public override bool getLearned()
+    {
+        return isLearned;
     }
 }
