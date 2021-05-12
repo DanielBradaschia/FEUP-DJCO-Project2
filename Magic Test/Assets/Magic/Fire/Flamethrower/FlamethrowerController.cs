@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class FlamethrowerController : Magic
 {
-    Transform cam;
-    GameObject player;
-
     public float cooldown = 20f;
     public float damage = 0.2f;
+
+    Transform cam;
+    GameObject player;
+    bool isLearned = false;
 
 
     public override void Activate()
@@ -24,6 +25,9 @@ public class FlamethrowerController : Magic
     {
         return cooldown;
     }
-    
-    
+
+    public override bool getLearned()
+    {
+        return isLearned;
+    }
 }

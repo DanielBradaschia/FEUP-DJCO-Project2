@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class WallController : Magic
 {
+    public float cooldown = 7f;
+
     Transform cam;
     GameObject player;
-
-    public float cooldown = 7f;
+    bool isLearned = true;
 
     public override void Activate()
     {
@@ -20,5 +21,10 @@ public class WallController : Magic
     public override float GetCooldown()
     {
         return cooldown;
+    }
+
+    public override bool getLearned()
+    {
+        return isLearned;
     }
 }
