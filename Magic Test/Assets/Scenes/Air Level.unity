@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410843480}
-  m_IndirectSpecularColor: {r: 0.37482774, g: 0.6137253, b: 0.8661903, a: 1}
+  m_IndirectSpecularColor: {r: 0.114102125, g: 0.32948005, b: 0.71094096, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -449,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3189a100596bb6d428e43da280311db4,
         type: 3}
       propertyPath: m_Name
-      value: "p\xF2dio"
+      value: podium
       objectReference: {fileID: 0}
     - target: {fileID: 1170970068873931921, guid: 3189a100596bb6d428e43da280311db4,
         type: 3}
@@ -2485,6 +2485,8 @@ MonoBehaviour:
   gravity: -9.81
   jumpHeight: 3
   dashDistance: 100
+  followTarget: {fileID: 0}
+  cameraSpeed: 200
 --- !u!143 &671453209
 CharacterController:
   m_ObjectHideFlags: 0
