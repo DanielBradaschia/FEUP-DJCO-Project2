@@ -118,6 +118,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         followTarget.Rotate(new Vector3(-Input.GetAxis("Mouse Y"), 0, 0) * Time.deltaTime * cameraSpeed);
         transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.deltaTime * cameraSpeed);
+        
     }
 
     public void HandleDash()

@@ -15,7 +15,7 @@ public class WallController : Magic
 
         Vector3 offset = cam.forward * 5;
         offset.y = 0;
-        Instantiate(gameObject, new Vector3(player.transform.position.x, 0.005f, player.transform.position.z) + offset, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
+        Instantiate(gameObject, new Vector3(player.transform.position.x, player.transform.position.y + 0.005f, player.transform.position.z) + offset, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
     }
 
     public override float GetCooldown()
