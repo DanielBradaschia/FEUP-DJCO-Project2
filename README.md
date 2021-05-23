@@ -1,5 +1,11 @@
 # FEUP-DJCO-Project2
 
+# Sub-Module
+This project is connected with Magic_Eternal_SND, to keep it updated you must:
+  - open Git Terminal
+  - run ```git fetch```
+  - run ```git submodule update --remote```
+
 ## TO DO - dev
 - [x] 4 initial magics
 - [x] UI
