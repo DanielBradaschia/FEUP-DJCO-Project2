@@ -4,6 +4,8 @@ public class CharacterBehaviour : MonoBehaviour
 {
     public float maxHealth = 100f;
     public PlayerHealthBar phb;
+    public GameObject ambient;
+
 
     float hp;
 
@@ -34,7 +36,13 @@ public class CharacterBehaviour : MonoBehaviour
 
 
         if (Input.GetKeyDown(KeyCode.L))
-            TakeDamage(10f);
+            ambient.SetActive(false);
+        if (Input.GetKeyUp(KeyCode.L))
+            ambient.SetActive(true);
+
+
+
+
     }
 
     public float getHp()

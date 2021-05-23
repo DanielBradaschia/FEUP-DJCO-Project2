@@ -6,7 +6,7 @@ public class ProtectionController : Magic
 
     public GameObject player;
 
-    ThirdPersonMovement mov;
+    PlayerMovement mov;
     CharacterBehaviour ch;
     GameObject clone;
     float timer = 5f;
@@ -16,7 +16,7 @@ public class ProtectionController : Magic
     {
         
 
-        mov = player.GetComponent<ThirdPersonMovement>();
+        mov = player.GetComponent<PlayerMovement>();
 
         ch = player.GetComponent<CharacterBehaviour>();
         ch.Heal(35f);

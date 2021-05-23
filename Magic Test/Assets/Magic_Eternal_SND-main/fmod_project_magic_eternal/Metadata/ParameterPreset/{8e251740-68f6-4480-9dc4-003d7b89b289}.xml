@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{8e251740-68f6-4480-9dc4-003d7b89b289}">
+		<property name="name">
+			<value>Random Pitch Shift</value>
+		</property>
+		<relationship name="folder">
+			<destination>{48814c71-099c-47d8-8a89-5d69b80e4908}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d632a49c-dbb3-4e6c-9649-1654f16a190c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d632a49c-dbb3-4e6c-9649-1654f16a190c}">
+		<property name="isHeld">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="automators">
+			<destination>{44884fad-5c7d-45ef-a86d-3c8de9078285}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{44884fad-5c7d-45ef-a86d-3c8de9078285}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>

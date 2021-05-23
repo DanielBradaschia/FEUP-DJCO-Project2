@@ -5,12 +5,12 @@ public class Dash : Magic
     public float cooldown = 3f;
     
 
-    ThirdPersonMovement characterMovement;
+    PlayerMovement characterMovement;
     bool isLearned = true;
 
     public override void Activate()
     {
-        characterMovement = GameObject.FindObjectOfType<ThirdPersonMovement>();
+        characterMovement = GameObject.FindObjectOfType<PlayerMovement>();
         characterMovement.HandleDash();
     }
 
