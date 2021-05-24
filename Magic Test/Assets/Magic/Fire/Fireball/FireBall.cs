@@ -11,6 +11,9 @@ public class FireBall : MonoBehaviour
 
     public GameObject explosion;
 
+    public float hitDamage = 50f;
+    public float explosionDamage = 35f;
+
     float countdown;
     bool hasExploded = false;
 
@@ -33,6 +36,11 @@ public class FireBall : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log(hitDamage);
+            collision.gameObject.GetComponent<Dummy>().Dmg(hitDamage);
+        }
         hasExploded = true;
         Explode();
     }
@@ -45,6 +53,10 @@ public class FireBall : MonoBehaviour
 
         foreach(Collider nearbyObj in colliders)
         {
+            if (nearbyObj.gameObject.tag == "Enemy")
+            {
+                nearbyObj.gameObject.GetComponent<Dummy>().Dmg(explosionDamage);
+            }
             Rigidbody rb = nearbyObj.GetComponent<Rigidbody>();
             if(rb != null)
             {

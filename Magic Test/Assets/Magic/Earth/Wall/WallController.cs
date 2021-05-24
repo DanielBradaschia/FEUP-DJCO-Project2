@@ -3,19 +3,26 @@ using UnityEngine;
 public class WallController : Magic
 {
     public float cooldown = 7f;
-
-    Transform cam;
-    GameObject player;
+    
     bool isLearned = true;
 
     public override void Activate()
     {
-        cam = GameObject.Find("Camera").transform;
-        player = GameObject.Find("Player");
+        GameObject camera = GameObject.Find("Camera");
 
-        Vector3 offset = cam.forward * 5;
-        offset.y = 0;
-        Instantiate(gameObject, new Vector3(player.transform.position.x, player.transform.position.y + 0.005f, player.transform.position.z) + offset, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
+        Transform cam = camera.transform;
+        
+
+        Ray rayOrigin = new Ray(camera.transform.position, camera.transform.forward);
+        
+        RaycastHit hit;
+        if(Physics.Raycast(rayOrigin, out hit))
+        {
+            if (hit.collider != null && hit.collider.gameObject.layer == 8)
+                Instantiate(gameObject, hit.point, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
+        }
+
+
     }
 
     public override float GetCooldown()

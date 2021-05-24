@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
     private Vector3 lastMove;
 
-    public float dashDistance = 5f;
+    public float dashDistance = 3f;
 
     public Transform followTarget;
 
@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void HandleDash()
     {
-        controller.Move(lastMove * speed * dashDistance * Time.deltaTime);
+        controller.Move(lastMove * dashDistance * Time.deltaTime);
     }
 
 }

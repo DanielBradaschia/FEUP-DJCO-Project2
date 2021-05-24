@@ -134,6 +134,8 @@ MonoBehaviour:
   force: 700
   explosion: {fileID: 850155441278585162, guid: 8ca52316a3fce82489fb31911745b8ef,
     type: 3}
+  hitDamage: 50
+  explosionDamage: 35
 --- !u!114 &5355512917144191771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decd72318643ca747b37554207108f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 5
 --- !u!1 &6800295686059891189
 GameObject:
   m_ObjectHideFlags: 0

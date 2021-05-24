@@ -3,19 +3,37 @@ using UnityEngine;
 public class FireballController : Magic
 {
     public float cooldown = 5f;
-
-    Transform cam;
-    GameObject player;
+    
     bool isLearned = true;
 
     public override void Activate()
     {
-        cam = GameObject.Find("Camera").transform;
-        player = GameObject.Find("Player");
+        GameObject camera = GameObject.Find("Camera");
 
-        Vector3 offset = player.transform.forward;
+        GameObject player = GameObject.Find("Player");
+        
+        Vector3 pos = player.transform.position + player.transform.forward;
 
-        Instantiate(gameObject, player.transform.position + offset, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
+        
+        Ray rayOrigin = new Ray(camera.transform.position, camera.transform.forward);
+
+        Vector3 aimPoint;
+        RaycastHit hit;
+        if (Physics.Raycast(rayOrigin, out hit))
+        {
+            if (hit.collider != null)
+            {
+                aimPoint = hit.point;
+                Vector3 direction = aimPoint - pos;
+                Instantiate(gameObject, pos, Quaternion.LookRotation(direction));
+            }
+        }
+        else
+        {
+            aimPoint = rayOrigin.origin + rayOrigin.direction * 1000f;
+            Vector3 direction = aimPoint - pos;
+            Instantiate(gameObject, pos, Quaternion.LookRotation(direction));
+        }
     }
 
     public override float GetCooldown()
