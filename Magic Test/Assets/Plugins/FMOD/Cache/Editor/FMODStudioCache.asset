@@ -1,5 +1,381 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9066741902507742745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Dying
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Dying
+  guid: 00bc8ce8d7d20e49b1e9e09a41669fad
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8353479711684630535}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1718
+--- !u!114 &-8529602752114736891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Wall Destroy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Wall Destroy
+  guid: d564e40030bc804e8bbf1ac6901f92ae
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8315254804441722273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Low Health
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Low Health
+  guid: 3e47c415f883544aba1882b378a4e5c9
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7847460151052169457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Earth Boss.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Earth
+    Boss.bank
+  Name: Earth Boss
+  StudioPath: bank:/Earth Boss
+  lastModified: 637574582601099518
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-7481185289911984851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Error
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Error
+  guid: f0cf3a3b5b007b41aada910965483de1
+  Banks:
+  - {fileID: -7303465822432117912}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7303465822432117912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Menu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Menu.bank
+  Name: Menu
+  StudioPath: bank:/Menu
+  lastModified: 637574582601229462
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5435143118411100962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Footsteps
+  guid: be770d87aa59af48853f21852aeb967d
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8283094849055094580}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5323503848512554643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Damage
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Damage
+  guid: 79605ab8162a0947b2ae944c433a94ba
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4756829665620822384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Pause On
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Pause On
+  guid: 791fb19a105208468d0faf3b1ef9f149
+  Banks:
+  - {fileID: -7303465822432117912}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4078723622258721094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Click
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Click
+  guid: 7c2a9f4ee6f2ec46978d06f510646a22
+  Banks:
+  - {fileID: -7303465822432117912}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3823506462567680435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Button Hover
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Button Hover
+  guid: 35e2d49cc5ba17468536b11180be6bb5
+  Banks:
+  - {fileID: -7303465822432117912}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3027771601063268423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Player.bank
+  Name: Player
+  StudioPath: bank:/Player
+  lastModified: 637574582601249456
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2250104232053078957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Jump
+  guid: f31573182e164a41bc3a50b308d0a0bd
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-2069668956503223771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Air Boss.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Air
+    Boss.bank
+  Name: Air Boss
+  StudioPath: bank:/Air Boss
+  lastModified: 637574582601099518
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1532809894930106045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Fire Boss.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Fire
+    Boss.bank
+  Name: Fire Boss
+  StudioPath: bank:/Fire Boss
+  lastModified: 637574582601109496
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-671025967238127016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Wall Build
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Wall Build
+  guid: f2d1a08b117b784f9ed1228d20d37874
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-189151068684735216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Main Menu Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Main Menu Music
+  guid: 1b8b4b42fe01404abf8e9243525a75bc
+  Banks:
+  - {fileID: -7303465822432117912}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +388,276 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: 9060799425005210099}
+  - {fileID: -2069668956503223771}
+  - {fileID: -7847460151052169457}
+  - {fileID: -1532809894930106045}
+  - {fileID: 2457727433847571813}
+  - {fileID: -7303465822432117912}
+  - {fileID: -3027771601063268423}
+  - {fileID: 6537630561089581619}
+  EditorEvents:
+  - {fileID: 2816801011784345153}
+  - {fileID: -189151068684735216}
+  - {fileID: 1292502616910249138}
+  - {fileID: -3823506462567680435}
+  - {fileID: -4756829665620822384}
+  - {fileID: -4078723622258721094}
+  - {fileID: 3831504795998208170}
+  - {fileID: -7481185289911984851}
+  - {fileID: -9066741902507742745}
+  - {fileID: 9136016005657788936}
+  - {fileID: -8315254804441722273}
+  - {fileID: 5547979453250492236}
+  - {fileID: -5323503848512554643}
+  - {fileID: -5435143118411100962}
+  - {fileID: -8529602752114736891}
+  - {fileID: -671025967238127016}
+  - {fileID: -2250104232053078957}
+  - {fileID: 7438538925021439852}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  stringsBankWriteTime: 0
+  MasterBanks:
+  - {fileID: 2457727433847571813}
+  StringsBanks:
+  - {fileID: 9060799425005210099}
+  stringsBankWriteTime: 637574582601119464
   cacheVersion: 6
+--- !u!114 &1292502616910249138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Entering Game
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Entering Game
+  guid: 35cbcde282fc4948bfe15ced2e130cf2
+  Banks:
+  - {fileID: -7303465822432117912}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2457727433847571813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637574582601119464
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2816801011784345153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Lava
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Lava
+  guid: 1473e4bc61c4c44f85b774c530c954ce
+  Banks:
+  - {fileID: -1532809894930106045}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3831504795998208170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Pause Off
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Pause Off
+  guid: 91a14e48920ba5498221f4b9fb41eac9
+  Banks:
+  - {fileID: -7303465822432117912}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5547979453250492236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Fire Ball
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Fire Ball
+  guid: 62a67cc8cd14ca448f69a67cd9210db1
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6537630561089581619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Water Boss.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Water
+    Boss.bank
+  Name: Water Boss
+  StudioPath: bank:/Water Boss
+  lastModified: 637574582601249456
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7438538925021439852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Dash
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Dash
+  guid: f5a9dd617c58514b9b64f9d83ed56106
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8283094849055094580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &8353479711684630535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dying/Random Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Random Pitch Shift
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &9060799425005210099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637574582601119464
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1902
+  Exists: 1
+--- !u!114 &9136016005657788936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Healing
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Healing
+  guid: 3ce6119f40c0df4dba70bdba576402f8
+  Banks:
+  - {fileID: -3027771601063268423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
