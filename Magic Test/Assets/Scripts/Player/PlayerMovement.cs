@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform followTarget;
 
     float velocityY = 0;
-    public float cameraSpeed = 200f;
+    public float cameraSpeed = 5f;
 
     void Start()
     {
@@ -110,14 +110,27 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         lastMove = velocity;
+
+        if(velocity.z != 0) {
+            Quaternion rotation = followTarget.rotation;
+            rotation.x = 0;
+            rotation. z = 0;
+            transform.rotation = rotation;
+            followTarget.localEulerAngles = new Vector3(followTarget.localEulerAngles.x, 0, 0);
+        }
  
         if (controller.isGrounded)
         {
             velocityY = 0;
         }
 
-        followTarget.Rotate(new Vector3(-Input.GetAxis("Mouse Y"), 0, 0) * Time.deltaTime * cameraSpeed);
-        transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.deltaTime * cameraSpeed);
+        float newX = -Input.GetAxis("Mouse Y");
+        float newY = Input.GetAxis("Mouse X");
+        if((followTarget.localEulerAngles.x > 300 && followTarget.localEulerAngles.x < 340 && newX < 0) || (followTarget.localEulerAngles.x > 70 && followTarget.localEulerAngles.x < 300 && newX > 0))
+        {
+            newX = 0;
+        }
+        followTarget.localEulerAngles += new Vector3(newX, newY, 0) * cameraSpeed;
         
     }
 
