@@ -1025,6 +1025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   phb: {fileID: 0}
+  ambient: {fileID: 0}
 --- !u!114 &562974578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,7 +1051,7 @@ MonoBehaviour:
   jumpHeight: 3
   dashDistance: 100
   followTarget: {fileID: 169279538}
-  cameraSpeed: 200
+  cameraSpeed: 5
 --- !u!143 &562974579
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1243,7 +1244,7 @@ MonoBehaviour:
   Damping: {x: 0.1, y: 0.5, z: 0.3}
   ShoulderOffset: {x: 0.5, y: -0.4, z: 0}
   VerticalArmLength: 0.4
-  CameraSide: 1
+  CameraSide: 0.5
   CameraDistance: 8
   CameraCollisionFilter:
     serializedVersion: 2
@@ -1501,7 +1502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902950734}
   m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49994588, y: 2.1699982, z: -7.999988}
+  m_LocalPosition: {x: -0.00003054738, y: 2.1699982, z: -8.000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 562974575}
@@ -2108,7 +2109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781943482}
   m_LocalRotation: {x: 0.0000000018617383, y: -0.031204341, z: 5.812262e-11, w: 0.99951303}
-  m_LocalPosition: {x: 422.1, y: 43.4, z: 1068.8}
+  m_LocalPosition: {x: 422.06915, y: 43.4, z: 1069.2991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 639427094}
