@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,23 +5,23 @@ public class AirBoss : MonoBehaviour
 {
 
     public GameObject tornado;
-    public float speed = 1f;
 
    // public NavMeshAgent agent;
-    public Transform player;
-    public LayerMask whatIsGround, whatIsPlayer;
     public float health;
     public float timeBetweenAttacks, attackRange;  
-    public bool alreadyAttacked, playerInAttackRange;
+    Transform player;
+    LayerMask whatIsPlayer;
+    bool alreadyAttacked, playerInAttackRange;
     private Rigidbody instTornado;
-    // Start is called before the first frame update
+
     void Awake()
     {
-        player = GameObject.Find("Main Character Idle").transform;
+        whatIsPlayer = 9;
+        player = GameObject.Find("Player").transform;
      //   agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
@@ -38,7 +36,7 @@ public class AirBoss : MonoBehaviour
         transform.LookAt(player);
         if (!alreadyAttacked)
         {
-            instTornado = Instantiate(tornado, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            instTornado = Instantiate(tornado, player.position, Quaternion.identity).GetComponent<Rigidbody>();
             //  instTornadoRigidbody.AddForce(-speed, 0, 0, ForceMode.Impulse);
             instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
             alreadyAttacked = true;
