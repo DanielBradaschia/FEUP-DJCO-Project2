@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Magic
   - Enemy
+  - EnemyPart
   layers:
   - Default
   - TransparentFX

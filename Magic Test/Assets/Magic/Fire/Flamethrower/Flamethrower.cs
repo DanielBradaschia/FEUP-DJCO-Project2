@@ -39,7 +39,7 @@ public class Flamethrower : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            other.GetComponent<Dummy>().Dmg(damage);
+            other.GetComponent<AbstractEnemy>().TakeDamage(damage);
         }
     }
 }

@@ -36,10 +36,15 @@ public class FireBall : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        GameObject obj = collision.gameObject;
+
+        if (obj.tag == "Enemy")
         {
-            Debug.Log(hitDamage);
-            collision.gameObject.GetComponent<Dummy>().Dmg(hitDamage);
+            obj.GetComponent<AbstractEnemy>().TakeDamage(hitDamage);
+        }
+        else if (obj.tag == "EnemyPart")
+        {
+            obj.transform.parent.gameObject.GetComponent<AbstractEnemy>().TakeDamage(hitDamage);
         }
         hasExploded = true;
         Explode();
@@ -57,6 +62,11 @@ public class FireBall : MonoBehaviour
             {
                 nearbyObj.gameObject.GetComponent<Dummy>().Dmg(explosionDamage);
             }
+            else if (nearbyObj.gameObject.tag == "EnemyPart")
+            {
+                nearbyObj.gameObject.transform.parent.gameObject.GetComponent<AbstractEnemy>().TakeDamage(hitDamage);
+            }
+
             Rigidbody rb = nearbyObj.GetComponent<Rigidbody>();
             if(rb != null)
             {

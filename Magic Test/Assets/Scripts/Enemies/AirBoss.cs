@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AirBoss : MonoBehaviour
+public class AirBoss : AbstractEnemy
 {
 
     public GameObject tornado;
@@ -53,13 +53,13 @@ public class AirBoss : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
         health -= damage;
-        if (health <= 0) Invoke(nameof(DestroyBoss), -5f); 
+        if (health <= 0) Invoke(nameof(Die), -5f); 
     }
 
-    private void DestroyBoss()
+    public override void Die()
     {
         Destroy(gameObject);
     }
