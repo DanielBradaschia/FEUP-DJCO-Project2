@@ -42,16 +42,14 @@ public class FireBall : MonoBehaviour
         {
             obj.GetComponent<AbstractEnemy>().TakeDamage(hitDamage);
         }
-        else if (obj.tag == "EnemyPart")
-        {
-            obj.transform.parent.gameObject.GetComponent<AbstractEnemy>().TakeDamage(hitDamage);
-        }
+
         hasExploded = true;
         Explode();
     }
 
     void Explode()
     {
+        
         Instantiate(explosion, transform.position, transform.rotation);
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
@@ -60,11 +58,7 @@ public class FireBall : MonoBehaviour
         {
             if (nearbyObj.gameObject.tag == "Enemy")
             {
-                nearbyObj.gameObject.GetComponent<Dummy>().Dmg(explosionDamage);
-            }
-            else if (nearbyObj.gameObject.tag == "EnemyPart")
-            {
-                nearbyObj.gameObject.transform.parent.gameObject.GetComponent<AbstractEnemy>().TakeDamage(hitDamage);
+                nearbyObj.gameObject.GetComponent<AbstractEnemy>().TakeDamage(explosionDamage);
             }
 
             Rigidbody rb = nearbyObj.GetComponent<Rigidbody>();

@@ -11,7 +11,12 @@ public class AirEnemy : AbstractEnemy
     float attackRange = 15f;
     [SerializeField]
     float attackCooldown = 5f;
+    [SerializeField]
+    float speed = 3f;
+    [SerializeField]
+    Transform[] moveSpots;
 
+    int randomSpot;
     float attackTimer;
 
     LayerMask whatIsPlayer;
@@ -25,6 +30,7 @@ public class AirEnemy : AbstractEnemy
 
     void Start()
     {
+        randomSpot = 0;
         attackTimer = attackCooldown;
         whatIsPlayer = 9;
         player = GameObject.Find("Player");
@@ -50,6 +56,11 @@ public class AirEnemy : AbstractEnemy
         }
         else
         {
+            if(state == 2)
+            {
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                head.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            }
             state = 1;
             Patrol();
         }
@@ -76,7 +87,20 @@ public class AirEnemy : AbstractEnemy
 
     void Patrol()
     {
-        //Patrol between 2 points
+        Vector3 targetDirection = moveSpots[randomSpot].position - transform.position;
+        float singleStep = speed * Time.deltaTime;
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+        transform.rotation = Quaternion.LookRotation(new Vector3(newDirection.x, 0, newDirection.z));
+
+        transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+
+        if(Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
+        {
+            if (randomSpot < moveSpots.Length - 1)
+                randomSpot++;
+            else
+                randomSpot = 0;
+        }
     }
 
 
