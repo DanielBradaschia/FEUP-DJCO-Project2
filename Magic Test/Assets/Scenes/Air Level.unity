@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410843480}
-  m_IndirectSpecularColor: {r: 0.114102125, g: 0.32948005, b: 0.71094096, a: 1}
+  m_IndirectSpecularColor: {r: 0.11412235, g: 0.3295453, b: 0.7113648, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5637,7 +5637,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  gravity: -9.81
+  gravity: -36
   jumpHeight: 3
   dashDistance: 100
   followTarget: {fileID: 77722173}
@@ -16428,6 +16428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868408843764504177, guid: a8e858cfd54ea684083ad2df45cfc2c3,
+        type: 3}
+      propertyPath: attackRange
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8868408843764504177, guid: a8e858cfd54ea684083ad2df45cfc2c3,
         type: 3}

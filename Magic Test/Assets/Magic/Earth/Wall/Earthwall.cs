@@ -22,7 +22,7 @@ public class Earthwall : MonoBehaviour
 
         if (transform.localScale.y < 1)
         {
-            transform.localScale += new Vector3(0, 0.01f, 0);
+            transform.localScale += new Vector3(0.1f, 0.1f, 0f);
         }
     }
 }
