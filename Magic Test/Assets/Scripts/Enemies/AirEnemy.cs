@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class AirEnemy : AbstractEnemy
 {
-    public GameObject head;
+    public GameObject head1;
+    public GameObject head2;
 
 
     [SerializeField]
@@ -56,11 +57,11 @@ public class AirEnemy : AbstractEnemy
         }
         else
         {
-            if(state == 2)
+            /*if(state == 2)
             {
                 transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-                head.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            }
+                head1.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            }*/
             state = 1;
             Patrol();
         }
@@ -68,7 +69,8 @@ public class AirEnemy : AbstractEnemy
 
     void Attack()
     {
-        head.transform.LookAt(player.transform);
+        head1.transform.LookAt(player.transform);
+        head2.transform.LookAt(player.transform);
 
         float speed = 5f;
         
