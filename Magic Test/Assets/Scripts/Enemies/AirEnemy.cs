@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class AirEnemy : AbstractEnemy
 {
-    public GameObject head1;
-    public GameObject head2;
-
+    public GameObject eye;
+    public Transform FirePoint;
+    public GameObject bullet;
 
     [SerializeField]
     float health = 3000f;
@@ -16,16 +16,13 @@ public class AirEnemy : AbstractEnemy
     float speed = 3f;
     [SerializeField]
     Transform[] moveSpots;
+    [SerializeField]
+    float projectileSpeed = 20f;
 
     int randomSpot;
     float attackTimer;
-
     LayerMask whatIsPlayer;
     GameObject player;
-    /**
-     *  1- Patrol 
-     *  2- Attack
-     */
     int state;
 
 
@@ -40,6 +37,9 @@ public class AirEnemy : AbstractEnemy
 
     void Update()
     {
+
+
+
         if(attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;
@@ -57,11 +57,6 @@ public class AirEnemy : AbstractEnemy
         }
         else
         {
-            /*if(state == 2)
-            {
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-                head1.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            }*/
             state = 1;
             Patrol();
         }
@@ -69,20 +64,25 @@ public class AirEnemy : AbstractEnemy
 
     void Attack()
     {
-        head1.transform.LookAt(player.transform);
-        head2.transform.LookAt(player.transform);
+        eye.transform.LookAt(player.transform);
 
+        Debug.DrawLine(eye.transform.position, player.transform.position);
         float speed = 5f;
         
         Vector3 targetDirection = player.transform.position - gameObject.transform.position;
         float singleStep = speed * Time.deltaTime;
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-        transform.rotation = Quaternion.LookRotation(new Vector3(newDirection.x, 0, newDirection.z));
+        transform.rotation = Quaternion.LookRotation(new Vector3(newDirection.x, newDirection.y, newDirection.z));
 
         if (attackTimer <= 0)
         {
-            //Shoot projectile
-            Debug.Log("Shoot");
+            GameObject bulletClone = Instantiate(bullet);
+            bulletClone.transform.position = FirePoint.position;
+            bulletClone.transform.rotation = Quaternion.Euler(eye.transform.rotation.x, gameObject.transform.rotation.y, 0f);
+
+            bulletClone.GetComponent<Rigidbody>().velocity = FirePoint.forward * projectileSpeed;
+
+
             attackTimer = attackCooldown;
         }
     }
@@ -105,10 +105,7 @@ public class AirEnemy : AbstractEnemy
         }
     }
 
-
-
-
-
+    
     public override void TakeDamage(float damage)
     {
         health -= damage;

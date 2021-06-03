@@ -33,15 +33,7 @@ public class CharacterBehaviour : MonoBehaviour
 
             phb.SetHealth(hp, maxHealth);
         }
-
-
-        if (Input.GetKeyDown(KeyCode.L))
-            ambient.SetActive(false);
-        if (Input.GetKeyUp(KeyCode.L))
-            ambient.SetActive(true);
-
-
-
+        
 
     }
 
