@@ -18,11 +18,11 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
-    public float gravity = -9.81f;
+    public float gravity = -36f;
     public float jumpHeight = 3f;
     private Vector3 lastMove;
 
-    public float dashDistance = 3f;
+    public float dashDistance = 100f;
 
     public Transform followTarget;
 
@@ -137,6 +137,11 @@ public class PlayerMovement : MonoBehaviour
     public void HandleDash()
     {
         controller.Move(lastMove * dashDistance * Time.deltaTime);
+    }
+
+    public void HandleDoubleJump()
+    {
+        velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
 
 }
