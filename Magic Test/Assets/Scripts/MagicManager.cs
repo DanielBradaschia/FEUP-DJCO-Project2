@@ -2,16 +2,44 @@ using UnityEngine;
 
 public class MagicManager : MonoBehaviour
 {
-    Magic[] selectedMagics;
+    Magic[] selectedMagics = new Magic[4];
+    MagicController mc;
+
+    [SerializeField]
     Magic[] allMagics;
 
-    // Start is called before the first frame update
-    void Start()
+    public Magic[] getSelectedMagics()
     {
-        
+        return selectedMagics;
     }
 
-    // Update is called once per frame
+    public Magic[] getAllMagics()
+    {
+        return allMagics;
+    }
+
+    void SwapMagic(int position, Magic magic)
+    {
+        selectedMagics[position] = magic;
+    }
+
+    void Start()
+    {
+        mc = GameObject.Find("Player").GetComponent<MagicController>();
+
+
+        int c = 0;
+        foreach (Magic magic in allMagics)
+        {
+            if(magic.getSelected())
+            {
+                selectedMagics[c] = magic;
+                c++;
+            }
+        }
+        mc.updateMagics(selectedMagics);
+    }
+
     void Update()
     {
         

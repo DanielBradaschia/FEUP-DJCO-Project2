@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class MagicController : MonoBehaviour
 {
-    public Magic[] selectedMagics;
 
     float[] magicCooldown;
     float[] mcd = { 0, 0, 0, 0 };
 
     public GameObject MagicSymbols;
 
+    public Magic[] selectedMagics;
     MagicSymbol[] symbolsImage;
 
     void Start()
@@ -57,8 +57,9 @@ public class MagicController : MonoBehaviour
         return selectedMagics;
     }
 
-    public void SwapMagic(int position, Magic magic)
+    public void updateMagics(Magic[] magics)
     {
-        selectedMagics[position] = magic;
+        selectedMagics = magics;
     }
+    
 }

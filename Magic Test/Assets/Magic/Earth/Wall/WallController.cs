@@ -5,6 +5,7 @@ public class WallController : Magic
     public float cooldown = 7f;
     
     bool isLearned = true;
+    bool isSelected = true;
 
     public override void Activate()
     {
@@ -33,5 +34,15 @@ public class WallController : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        isSelected = select;
     }
 }

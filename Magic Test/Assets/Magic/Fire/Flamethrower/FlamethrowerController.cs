@@ -6,7 +6,7 @@ public class FlamethrowerController : Magic
     public float damage = 0.2f;
     
     bool isLearned = false;
-
+    bool isSelected = false;
 
     public override void Activate()
     {
@@ -47,5 +47,15 @@ public class FlamethrowerController : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        isSelected = select;
     }
 }
