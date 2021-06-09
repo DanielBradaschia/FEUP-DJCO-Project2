@@ -8,13 +8,15 @@ public class LaserBullet : MonoBehaviour
     {
         GameObject obj = collision.gameObject;
 
-        if (obj.tag == "Player")
+        if (obj.tag != "Enemy")
         {
-            CharacterBehaviour player = obj.GetComponent<CharacterBehaviour>();
-            player.TakeDamage(damage);
+            if (obj.tag == "Player")
+            {
+                CharacterBehaviour player = obj.GetComponent<CharacterBehaviour>();
+                player.TakeDamage(damage);
+            }
+
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
-
     }
 }
