@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        followTarget.localEulerAngles = new Vector3(0, 0, 0);
     }
 
     /*void Update()
