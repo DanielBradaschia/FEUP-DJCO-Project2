@@ -37,9 +37,7 @@ public class AirEnemy : AbstractEnemy
 
     void Update()
     {
-
-
-
+        
         if(attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;

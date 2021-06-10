@@ -11,6 +11,7 @@ public class ProtectionController : Magic
     GameObject clone;
     float timer = 5f;
     bool isLearned = false;
+    bool isSelected = false;
 
     void Start()
     {
@@ -51,5 +52,15 @@ public class ProtectionController : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        isSelected = select;
     }
 }

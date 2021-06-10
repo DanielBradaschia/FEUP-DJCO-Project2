@@ -5,6 +5,7 @@ public class FireballController : Magic
     public float cooldown = 5f;
     
     bool isLearned = true;
+    bool isSelected = true;
 
     public override void Activate()
     {
@@ -44,5 +45,15 @@ public class FireballController : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        isSelected = select;
     }
 }

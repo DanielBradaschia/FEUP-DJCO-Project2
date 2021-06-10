@@ -528,9 +528,11 @@ GameObject:
   - component: {fileID: 3703613165053831318}
   - component: {fileID: 3814366298426165852}
   - component: {fileID: 3814366298426165850}
+  - component: {fileID: 8075338010530927846}
+  - component: {fileID: 180068886540210896}
   m_Layer: 0
   m_Name: AirEnemyAI
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,9 +594,9 @@ MonoBehaviour:
   eye: {fileID: 7616845259459260426}
   FirePoint: {fileID: 6961378488404462431}
   bullet: {fileID: 7988375969319392278, guid: 1e0c160c4f32a5a4f9177a82eb1cff77, type: 3}
-  health: 1000
+  health: 250
   attackRange: 12
-  attackCooldown: 5
+  attackCooldown: 2
   speed: 3
   moveSpots:
   - {fileID: 0}
@@ -602,6 +604,32 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   projectileSpeed: 50
+--- !u!135 &8075338010530927846
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4048226035673477676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.026
+  m_Center: {x: 0.005, y: 0.047, z: -0.001}
+--- !u!65 &180068886540210896
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4048226035673477676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03469083, y: 0.05395497, z: 0.013390923}
+  m_Center: {x: 0.006646843, y: -0.0030225106, z: -0.0011997983}
 --- !u!1 &6872960095120169289
 GameObject:
   m_ObjectHideFlags: 0
