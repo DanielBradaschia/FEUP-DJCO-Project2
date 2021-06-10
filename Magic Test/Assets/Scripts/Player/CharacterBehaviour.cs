@@ -4,7 +4,6 @@ public class CharacterBehaviour : MonoBehaviour
 {
     public float maxHealth = 100f;
     public PlayerHealthBar phb;
-    public GameObject ambient;
 
 
     float hp;

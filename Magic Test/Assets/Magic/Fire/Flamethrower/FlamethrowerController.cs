@@ -12,6 +12,7 @@ public class FlamethrowerController : Magic
     {
         GameObject camera = GameObject.Find("Camera");
         GameObject player = GameObject.Find("Player");
+        Transform fp = player.transform.Find("FirePoint");
 
         Vector3 pos = player.transform.position + player.transform.forward;
 
@@ -24,16 +25,16 @@ public class FlamethrowerController : Magic
             if (hit.collider != null)
             {
                 aimPoint = hit.point;
-                Vector3 direction = aimPoint - pos;
-                GameObject flame = Instantiate(gameObject, pos, Quaternion.LookRotation(direction), player.transform);
+                Vector3 direction = aimPoint - fp.position;
+                GameObject flame = Instantiate(gameObject, fp.position, Quaternion.LookRotation(direction), player.transform);
                 Destroy(flame, 5f);
             }
         }
         else
         {
             aimPoint = rayOrigin.origin + rayOrigin.direction * 1000f;
-            Vector3 direction = aimPoint - pos;
-            GameObject flame = Instantiate(gameObject, pos, Quaternion.LookRotation(direction), player.transform);
+            Vector3 direction = aimPoint - fp.position;
+            GameObject flame = Instantiate(gameObject, fp.position, Quaternion.LookRotation(direction), player.transform);
             Destroy(flame, 5f);
         }
         

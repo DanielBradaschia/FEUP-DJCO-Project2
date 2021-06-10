@@ -12,21 +12,24 @@ public class FireballController : Magic
         GameObject camera = GameObject.Find("Camera");
 
         GameObject player = GameObject.Find("Player");
-        
-        Vector3 pos = player.transform.position + player.transform.forward;
+        Transform fp = player.transform.Find("FirePoint");
+
+
+        Vector3 pos = player.transform.position + player.transform.forward + player.transform.up;
 
         
         Ray rayOrigin = new Ray(camera.transform.position, camera.transform.forward);
 
         Vector3 aimPoint;
         RaycastHit hit;
+
         if (Physics.Raycast(rayOrigin, out hit))
         {
             if (hit.collider != null)
             {
                 aimPoint = hit.point;
-                Vector3 direction = aimPoint - pos;
-                Instantiate(gameObject, pos, Quaternion.LookRotation(direction));
+                Vector3 direction = aimPoint - fp.position;
+                Instantiate(gameObject, fp.position, Quaternion.LookRotation(direction));
             }
         }
         else

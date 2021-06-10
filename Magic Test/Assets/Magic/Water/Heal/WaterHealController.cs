@@ -12,7 +12,6 @@ public class WaterHealController : Magic
 
     public override void Activate()
     {
-        Debug.Log("Water activate");
         player = GameObject.Find("Player");
 
         Instantiate(gameObject, player.transform.position, Quaternion.Euler(0f, 0f, 0f), player.transform);

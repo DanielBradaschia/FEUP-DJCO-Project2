@@ -20,7 +20,19 @@ public class WallController : Magic
         if(Physics.Raycast(rayOrigin, out hit))
         {
             if (hit.collider != null && hit.collider.gameObject.layer == 8)
-                Instantiate(gameObject, hit.point, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
+            {
+                MeshRenderer mr = hit.collider.gameObject.GetComponent<MeshRenderer>();
+                Material mat = mr.material;
+
+                GameObject wallClone = Instantiate(gameObject, hit.point, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
+
+                MeshRenderer[] children = wallClone.GetComponentsInChildren<MeshRenderer>();
+
+                foreach (MeshRenderer mesh in children)
+                {
+                    mesh.material = mat;
+                }
+            }
         }
 
 

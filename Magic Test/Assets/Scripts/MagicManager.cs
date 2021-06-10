@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MagicManager : MonoBehaviour
 {
-    Magic[] selectedMagics = new Magic[4];
+    Magic[] selectedMagics = { null, null, null, null };
     MagicController mc;
 
     [SerializeField]
@@ -37,7 +37,9 @@ public class MagicManager : MonoBehaviour
                 c++;
             }
         }
-        mc.updateMagics(selectedMagics);
+        
+        
+        //mc.updateMagics(selectedMagics);
     }
 
     void Update()

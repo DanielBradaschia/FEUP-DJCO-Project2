@@ -29,55 +29,29 @@ public class PlayerMovement : MonoBehaviour
     float velocityY = 0;
     public float cameraSpeed = 5f;
 
+    [SerializeField]
+    Animator animator;
+    float movingForward;
+    float movingSideways;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    /*void Update()
-    {
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 direction = new Vector3(x, 0f, z).normalized;
-
-        if(direction.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
-
-            Vector3 moveDir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
-
-            lastMove = moveDir;
-
-        }
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
-
-        velocity.y += gravity * Time.deltaTime;
-
-        controller.Move(velocity * Time.deltaTime);
-    }*/
+    
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         velocityY += gravity * Time.deltaTime;
- 
-        Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+
+        movingForward = Input.GetAxisRaw("Vertical");
+        movingSideways = Input.GetAxisRaw("Horizontal");
+
+        animator.SetFloat("Forward", movingForward);
+
+        Vector3 input = new Vector3(movingSideways, 0, movingForward);
         input = input.normalized;
  
         Vector3 temp = Vector3.zero;

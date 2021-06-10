@@ -35,30 +35,31 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-   public void Resume ()
+    public void Resume ()
     {
-      Player.GetComponent<PlayerMovement>().enabled = true;
-      pauseMenuUI.SetActive(false);
-      Time.timeScale = 1f;
-      GameIsPaused = false;
-      Cursor.visible = false;
-      
-      Cursor.lockState = CursorLockMode.Locked;
+        Player.GetComponent<PlayerMovement>().enabled = true;
+        Player.GetComponent<MagicController>().enabled = true;
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Pause ()
     {
-       Player.GetComponent<PlayerMovement>().enabled = false;
-       pauseMenuUI.SetActive(true);
-       Time.timeScale = 0f;
-       GameIsPaused = true;
-       Cursor.visible = true;
-       Cursor.lockState = CursorLockMode.None;
+        Player.GetComponent<PlayerMovement>().enabled = false;
+        Player.GetComponent<MagicController>().enabled = false;
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void LoadMenu()
-        {
-           Debug.Log("Loading menu...");
-        }
+    {
+        Debug.Log("Loading menu...");
+    }
 
     public void QuitGame()
     {
