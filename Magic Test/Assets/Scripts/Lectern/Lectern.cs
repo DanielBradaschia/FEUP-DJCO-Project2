@@ -1,7 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
 
 public class Lectern : MonoBehaviour
 {
@@ -10,13 +7,11 @@ public class Lectern : MonoBehaviour
 
     Transform player;
     Transform lectern;
-    bool isChoosing;
-
+    
     void Start()
     {
         player = GameObject.Find("Player").transform;
         lectern = gameObject.transform;
-        isChoosing = false;
     }
     
     void Update()
@@ -27,32 +22,17 @@ public class Lectern : MonoBehaviour
             text.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                if (isChoosing)
-                    returnGame();
-                else
-                    chooseSpells();
+                spellBookUI.SetActive(true);
+                Cursor.lockState = CursorLockMode.Confined;
+                Time.timeScale = 0f;
             }
         }
         else
         {
-            returnGame();
+            Cursor.lockState = CursorLockMode.Locked;
+            text.SetActive(false);
+            spellBookUI.SetActive(false);
         }
-    }
-
-    void chooseSpells() 
-    {
-        spellBookUI.SetActive(true);
-        Cursor.lockState = CursorLockMode.Confined;
-        Time.timeScale = 0f;
-        isChoosing = true;
-    }
-
-    void returnGame()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        text.SetActive(false);
-        spellBookUI.SetActive(false);
-        isChoosing = false;
     }
     
 }
