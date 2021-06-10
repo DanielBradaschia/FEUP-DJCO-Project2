@@ -4,10 +4,9 @@ using UnityEngine.UI;
 public class SpellBook : MonoBehaviour
 {
     public MagicController controller;
-    public Magic[] allMagics;
 
     Magic[] selectedMagics;
-    
+    Magic[] allMagics;
 
     void Start()
     {
@@ -24,7 +23,7 @@ public class SpellBook : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(allMagics.Length);
+        
     }
 
     public void Resume()
