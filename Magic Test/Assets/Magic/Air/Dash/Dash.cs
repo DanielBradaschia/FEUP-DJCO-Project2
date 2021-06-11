@@ -32,6 +32,7 @@ public class Dash : Magic
 
     public override void setSelected(bool select)
     {
-        isSelected = select;
+        if (isLearned)
+            isSelected = select;
     }
 }

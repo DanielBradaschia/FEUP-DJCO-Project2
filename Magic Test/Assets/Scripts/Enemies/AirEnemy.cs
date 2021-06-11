@@ -64,10 +64,11 @@ public class AirEnemy : AbstractEnemy
     {
         eye.transform.LookAt(player.transform);
 
-        Debug.DrawLine(eye.transform.position, player.transform.position);
+        // Debug.DrawLine(eye.transform.position, player.transform.position + new Vector3(0f, 1f, 0f));
         float speed = 5f;
         
         Vector3 targetDirection = player.transform.position - gameObject.transform.position;
+        targetDirection += new Vector3(0f, 1.5f, 0f);
         float singleStep = speed * Time.deltaTime;
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
         transform.rotation = Quaternion.LookRotation(new Vector3(newDirection.x, newDirection.y, newDirection.z));
