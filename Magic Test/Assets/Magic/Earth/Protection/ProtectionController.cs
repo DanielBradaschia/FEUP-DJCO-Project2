@@ -15,8 +15,6 @@ public class ProtectionController : Magic
 
     void Start()
     {
-        
-
         mov = player.GetComponent<PlayerMovement>();
 
         ch = player.GetComponent<CharacterBehaviour>();
@@ -40,6 +38,7 @@ public class ProtectionController : Magic
     public override void Activate()
     {
         player = GameObject.Find("Player");
+        PlayerMovement pm = player.GetComponent<PlayerMovement>();
 
         clone = Instantiate(gameObject, player.transform.position, Quaternion.Euler(0f, 0f, 0f), player.transform);
     }

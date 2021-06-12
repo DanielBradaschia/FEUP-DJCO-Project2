@@ -603,7 +603,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  projectileSpeed: 50
+  projectileSpeed: 30
 --- !u!135 &8075338010530927846
 SphereCollider:
   m_ObjectHideFlags: 0

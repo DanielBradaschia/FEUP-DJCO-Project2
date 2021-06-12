@@ -33,8 +33,7 @@ public class AirEnemy : AbstractEnemy
         whatIsPlayer = 9;
         player = GameObject.Find("Player");
     }
-
-
+    
     void Update()
     {
         

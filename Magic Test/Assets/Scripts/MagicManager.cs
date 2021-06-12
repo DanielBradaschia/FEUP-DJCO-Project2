@@ -34,10 +34,10 @@ public class MagicManager : MonoBehaviour
             if(magic.getSelected())
             {
                 selectedMagics[c] = magic;
+                
                 c++;
             }
         }
-        
         
         //mc.updateMagics(selectedMagics);
     }
