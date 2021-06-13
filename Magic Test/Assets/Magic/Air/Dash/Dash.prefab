@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
+  icon: {fileID: 21300000, guid: b5592ca7bc7af104bbe4c094f528afec, type: 3}

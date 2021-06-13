@@ -8,7 +8,8 @@ public class WaterHealController : Magic
 
     GameObject player;
     bool isLearned = true;
-    bool isSelected = true;
+    [SerializeField]
+    bool isSelected = false;
 
     public override void Activate()
     {
@@ -39,5 +40,11 @@ public class WaterHealController : Magic
     {
         if (isLearned)
             isSelected = select;
+    }
+
+    public Sprite icon;
+    public override Sprite getSprite()
+    {
+        return icon;
     }
 }

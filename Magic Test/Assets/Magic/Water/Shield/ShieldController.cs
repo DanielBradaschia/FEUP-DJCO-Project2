@@ -11,8 +11,10 @@ public class ShieldController : Magic
     GameObject player;
     CharacterBehaviour ch;
 
-    bool isLearned = false;
-    bool isSelected = false;
+    bool isLearned = true;
+    [SerializeField]
+    bool isSelected = true;
+
 
     void Update()
     {
@@ -59,6 +61,11 @@ public class ShieldController : Magic
     {
         if (isLearned)
             isSelected = select;
+    }
 
+    public Sprite icon;
+    public override Sprite getSprite()
+    {
+        return icon;
     }
 }

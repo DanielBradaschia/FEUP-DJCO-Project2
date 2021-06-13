@@ -5,6 +5,7 @@ public class WallController : Magic
     public float cooldown = 7f;
     
     bool isLearned = true;
+    [SerializeField]
     bool isSelected = true;
 
     public override void Activate()
@@ -57,5 +58,11 @@ public class WallController : Magic
     {
         if (isLearned)
             isSelected = select;
+    }
+
+    public Sprite icon;
+    public override Sprite getSprite()
+    {
+        return icon;
     }
 }

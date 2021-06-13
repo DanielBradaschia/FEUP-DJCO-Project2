@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 5
+  icon: {fileID: 21300000, guid: 89b97ed21b1886b419766c6c56e4a787, type: 3}
 --- !u!1 &6800295686059891189
 GameObject:
   m_ObjectHideFlags: 0

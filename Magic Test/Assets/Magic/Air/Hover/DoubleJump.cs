@@ -9,6 +9,7 @@ public class DoubleJump : Magic
 
     PlayerMovement characterMovement;
     bool isLearned = false;
+    [SerializeField]
     bool isSelected = false;
 
     public override void Activate()
@@ -36,5 +37,11 @@ public class DoubleJump : Magic
     {
         if (isLearned)
             isSelected = select;
+    }
+
+    public Sprite icon;
+    public override Sprite getSprite()
+    {
+        return icon;
     }
 }

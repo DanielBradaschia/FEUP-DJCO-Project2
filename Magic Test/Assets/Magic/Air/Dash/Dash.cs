@@ -7,6 +7,7 @@ public class Dash : Magic
 
     PlayerMovement characterMovement;
     bool isLearned = true;
+    [SerializeField]
     bool isSelected = true;
 
     public override void Activate()
@@ -34,5 +35,11 @@ public class Dash : Magic
     {
         if (isLearned)
             isSelected = select;
+    }
+
+    public Sprite icon;
+    public override Sprite getSprite()
+    {
+        return icon;
     }
 }
