@@ -8,7 +8,8 @@ public class DoubleJump : Magic
 
 
     PlayerMovement characterMovement;
-    bool isLearned = true;
+    bool isLearned = false;
+    bool isSelected = false;
 
     public override void Activate()
     {
@@ -24,5 +25,16 @@ public class DoubleJump : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        if (isLearned)
+            isSelected = select;
     }
 }

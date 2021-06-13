@@ -7,6 +7,7 @@ public class Dash : Magic
 
     PlayerMovement characterMovement;
     bool isLearned = true;
+    bool isSelected = true;
 
     public override void Activate()
     {
@@ -22,5 +23,16 @@ public class Dash : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        if (isLearned)
+            isSelected = select;
     }
 }

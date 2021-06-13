@@ -4,19 +4,20 @@ public class CharacterBehaviour : MonoBehaviour
 {
     public float maxHealth = 100f;
     public PlayerHealthBar phb;
-    public GameObject ambient;
 
 
     float hp;
 
     bool healing;
     float healingAmount;
+    bool isShielded;
 
     void Start()
     {
         hp = maxHealth;
         phb.SetHealth(hp, maxHealth);
         healing = false;
+        isShielded = false;
     }
     
     void Update()
@@ -44,8 +45,16 @@ public class CharacterBehaviour : MonoBehaviour
 
     public void TakeDamage(float value)
     {
-        hp -= value;
-        
+        if (isShielded)
+        {
+            float v = value * 0.75f;
+            hp -= v;
+        }
+        else
+        {
+            hp -= value;
+        }
+
         phb.SetHealth(hp, maxHealth);
     }
 
@@ -54,6 +63,11 @@ public class CharacterBehaviour : MonoBehaviour
         healing = true;
         healingAmount = value;
         
+    }
+
+    public void SetShield(bool shield)
+    {
+        isShielded = shield;
     }
 
 }

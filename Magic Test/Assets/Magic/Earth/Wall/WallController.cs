@@ -5,6 +5,7 @@ public class WallController : Magic
     public float cooldown = 7f;
     
     bool isLearned = true;
+    bool isSelected = true;
 
     public override void Activate()
     {
@@ -19,7 +20,19 @@ public class WallController : Magic
         if(Physics.Raycast(rayOrigin, out hit))
         {
             if (hit.collider != null && hit.collider.gameObject.layer == 8)
-                Instantiate(gameObject, hit.point, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
+            {
+                MeshRenderer mr = hit.collider.gameObject.GetComponent<MeshRenderer>();
+                Material mat = mr.material;
+
+                GameObject wallClone = Instantiate(gameObject, hit.point, Quaternion.Euler(0f, cam.eulerAngles.y, 0f));
+
+                MeshRenderer[] children = wallClone.GetComponentsInChildren<MeshRenderer>();
+
+                foreach (MeshRenderer mesh in children)
+                {
+                    mesh.material = mat;
+                }
+            }
         }
 
 
@@ -33,5 +46,16 @@ public class WallController : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        if (isLearned)
+            isSelected = select;
     }
 }

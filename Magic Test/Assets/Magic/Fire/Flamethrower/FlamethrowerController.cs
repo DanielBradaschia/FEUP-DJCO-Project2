@@ -6,12 +6,13 @@ public class FlamethrowerController : Magic
     public float damage = 0.2f;
     
     bool isLearned = false;
-
+    bool isSelected = false;
 
     public override void Activate()
     {
         GameObject camera = GameObject.Find("Camera");
         GameObject player = GameObject.Find("Player");
+        Transform fp = player.transform.Find("FirePoint");
 
         Vector3 pos = player.transform.position + player.transform.forward;
 
@@ -24,16 +25,16 @@ public class FlamethrowerController : Magic
             if (hit.collider != null)
             {
                 aimPoint = hit.point;
-                Vector3 direction = aimPoint - pos;
-                GameObject flame = Instantiate(gameObject, pos, Quaternion.LookRotation(direction), player.transform);
+                Vector3 direction = aimPoint - fp.position;
+                GameObject flame = Instantiate(gameObject, fp.position, Quaternion.LookRotation(direction), player.transform);
                 Destroy(flame, 5f);
             }
         }
         else
         {
             aimPoint = rayOrigin.origin + rayOrigin.direction * 1000f;
-            Vector3 direction = aimPoint - pos;
-            GameObject flame = Instantiate(gameObject, pos, Quaternion.LookRotation(direction), player.transform);
+            Vector3 direction = aimPoint - fp.position;
+            GameObject flame = Instantiate(gameObject, fp.position, Quaternion.LookRotation(direction), player.transform);
             Destroy(flame, 5f);
         }
         
@@ -47,5 +48,16 @@ public class FlamethrowerController : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        if (isLearned)
+            isSelected = select;
     }
 }

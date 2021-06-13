@@ -8,10 +8,10 @@ public class WaterHealController : Magic
 
     GameObject player;
     bool isLearned = true;
+    bool isSelected = true;
 
     public override void Activate()
     {
-        Debug.Log("Water activate");
         player = GameObject.Find("Player");
 
         Instantiate(gameObject, player.transform.position, Quaternion.Euler(0f, 0f, 0f), player.transform);
@@ -28,5 +28,16 @@ public class WaterHealController : Magic
     public override bool getLearned()
     {
         return isLearned;
+    }
+
+    public override bool getSelected()
+    {
+        return isSelected;
+    }
+
+    public override void setSelected(bool select)
+    {
+        if (isLearned)
+            isSelected = select;
     }
 }
