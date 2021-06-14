@@ -24,9 +24,10 @@ public class AirBoss : AbstractEnemy
 
     void Update()
     {
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
+        //playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        playerInAttackRange = Vector3.Distance(player.position, transform.position) < attackRange;
         if (playerInAttackRange) AttackPlayer();
+        if (health <= 1000) timeBetweenAttacks = 3;
     }
 
     private void AttackPlayer()
@@ -38,11 +39,11 @@ public class AirBoss : AbstractEnemy
         {
             instTornado = Instantiate(tornado, player.position, Quaternion.identity).GetComponent<Rigidbody>();
             //  instTornadoRigidbody.AddForce(-speed, 0, 0, ForceMode.Impulse);
-            instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
+            //instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
             alreadyAttacked = true;
 
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
-            instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
+            //instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
 
         }
     }
