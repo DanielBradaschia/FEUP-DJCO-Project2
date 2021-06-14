@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -9,6 +6,10 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject Player;
+
+    public AudioSource pauseON;
+    public AudioSource pauseOFF;
+    public AudioSource ambient;
 
     private void Start()
     {
@@ -37,6 +38,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume ()
     {
+        pauseOFF.Play();
+        ambient.mute = false;
         Player.GetComponent<PlayerMovement>().enabled = true;
         Player.GetComponent<MagicController>().enabled = true;
         pauseMenuUI.SetActive(false);
@@ -47,6 +50,8 @@ public class PauseMenu : MonoBehaviour
     }
     void Pause ()
     {
+        pauseON.Play();
+        ambient.mute = true;
         Player.GetComponent<PlayerMovement>().enabled = false;
         Player.GetComponent<MagicController>().enabled = false;
         pauseMenuUI.SetActive(true);
