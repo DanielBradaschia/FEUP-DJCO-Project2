@@ -1,9 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MagicManager : MonoBehaviour
 {
     Magic[] selectedMagics = { null, null, null, null };
-    MagicController mc;
 
     [SerializeField]
     Magic[] allMagics;
@@ -18,32 +18,30 @@ public class MagicManager : MonoBehaviour
         return allMagics;
     }
 
-    void SwapMagic(int position, Magic magic)
+    public void SwapMagic(int position, Sprite magic)
     {
-        selectedMagics[position] = magic;
+        foreach (Magic m in allMagics)
+        {
+            if(m.getSprite().Equals(magic))
+            {
+                selectedMagics[position].setSelected(false);
+                m.setSelected(true);
+                selectedMagics[position] = m;
+                break;
+            }
+        }
     }
 
     void Start()
     {
-        mc = GameObject.Find("Player").GetComponent<MagicController>();
-
-
         int c = 0;
         foreach (Magic magic in allMagics)
         {
             if(magic.getSelected())
             {
                 selectedMagics[c] = magic;
-                
                 c++;
             }
         }
-        
-        //mc.updateMagics(selectedMagics);
-    }
-
-    void Update()
-    {
-        
     }
 }

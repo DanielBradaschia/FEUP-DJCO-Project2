@@ -11,6 +11,7 @@ public class ProtectionController : Magic
     GameObject clone;
     float timer = 5f;
     bool isLearned = false;
+    [SerializeField]
     bool isSelected = false;
 
     void Start()
@@ -61,5 +62,11 @@ public class ProtectionController : Magic
     public override void setSelected(bool select)
     {
         isSelected = select;
+    }
+
+    public Sprite icon;
+    public override Sprite getSprite()
+    {
+        return icon;
     }
 }

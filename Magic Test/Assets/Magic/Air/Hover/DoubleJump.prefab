@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6816389274270431591}
   - component: {fileID: 1878193896803251112}
   m_Layer: 0
-  m_Name: Hover
+  m_Name: DoubleJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
+  icon: {fileID: 21300000, guid: 25afc935c6908914bae64e0fbb8a7428, type: 3}

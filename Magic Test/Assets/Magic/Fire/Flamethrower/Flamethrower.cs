@@ -3,7 +3,6 @@ using UnityEngine;
 public class Flamethrower : MonoBehaviour
 {
     public float damage = 0.2f;
-    public GameObject flame;
 
     GameObject camera;
     Vector3 hit;

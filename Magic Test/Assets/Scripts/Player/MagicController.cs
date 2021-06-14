@@ -8,16 +8,23 @@ public class MagicController : MonoBehaviour
 
     public GameObject MagicSymbols;
 
-    public Magic[] selectedMagics;
+    Magic[] selectedMagics;
     MagicSymbol[] symbolsImage;
+    MagicManager manager;
 
     void Start()
     {
+        manager = GameObject.Find("Manager").GetComponent<MagicManager>();
+        selectedMagics = manager.getSelectedMagics();
         symbolsImage = MagicSymbols.GetComponentsInChildren<MagicSymbol>();
     }
 
     void Update()
     {
+        for(int i = 0; i < 4; i++)
+        {
+            symbolsImage[i].SetSymbol(selectedMagics[i].getSprite());
+        }
         for (int i = 0; i < mcd.Length; i++)
         {
             mcd[i] -= Time.deltaTime;

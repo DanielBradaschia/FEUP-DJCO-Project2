@@ -6,6 +6,7 @@ public class FlamethrowerController : Magic
     public float damage = 0.2f;
     
     bool isLearned = false;
+    [SerializeField]
     bool isSelected = false;
 
     public override void Activate()
@@ -59,5 +60,11 @@ public class FlamethrowerController : Magic
     {
         if (isLearned)
             isSelected = select;
+    }
+
+    public Sprite icon;
+    public override Sprite getSprite()
+    {
+        return icon;
     }
 }

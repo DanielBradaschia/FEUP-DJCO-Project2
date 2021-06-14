@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class MagicSymbol : MonoBehaviour
 {
     public Image symbol;
+    public Image fade;
 
     float cooldown;
     float fill;
@@ -21,5 +22,11 @@ public class MagicSymbol : MonoBehaviour
         fill = 0;
         this.cooldown = cooldown;
         symbol.fillAmount = 0;
+    }
+
+    public void SetSymbol(Sprite s)
+    {
+        symbol.sprite = s;
+        fade.sprite = s;
     }
 }

@@ -5,7 +5,9 @@ public class FireballController : Magic
     public float cooldown = 5f;
     
     bool isLearned = true;
+    [SerializeField]
     bool isSelected = true;
+
 
     public override void Activate()
     {
@@ -59,5 +61,11 @@ public class FireballController : Magic
     {
         if (isLearned)
             isSelected = select;
+    }
+
+    public Sprite icon;
+    public override Sprite getSprite()
+    {
+        return icon;
     }
 }

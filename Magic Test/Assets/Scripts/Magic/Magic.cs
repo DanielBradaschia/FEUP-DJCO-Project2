@@ -11,4 +11,6 @@ public abstract class Magic : MonoBehaviour
     public abstract bool getSelected();
 
     public abstract void setSelected(bool select);
+
+    public abstract Sprite getSprite();
 }
