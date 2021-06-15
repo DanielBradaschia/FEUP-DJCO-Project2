@@ -10,7 +10,7 @@ public class ShieldController : Magic
     bool isActive = false;
     GameObject player;
     CharacterBehaviour ch;
-
+    [SerializeField]
     bool isLearned = true;
     [SerializeField]
     bool isSelected = true;

@@ -6,6 +6,7 @@ public class Dash : Magic
     
 
     PlayerMovement characterMovement;
+    [SerializeField]
     bool isLearned = true;
     [SerializeField]
     bool isSelected = true;

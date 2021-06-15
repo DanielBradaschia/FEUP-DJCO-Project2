@@ -10,6 +10,7 @@ public class ProtectionController : Magic
     CharacterBehaviour ch;
     GameObject clone;
     float timer = 5f;
+    [SerializeField]
     bool isLearned = false;
     [SerializeField]
     bool isSelected = false;

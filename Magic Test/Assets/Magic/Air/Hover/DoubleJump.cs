@@ -8,6 +8,7 @@ public class DoubleJump : Magic
 
 
     PlayerMovement characterMovement;
+    [SerializeField]
     bool isLearned = false;
     [SerializeField]
     bool isSelected = false;

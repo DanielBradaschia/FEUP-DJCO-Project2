@@ -7,6 +7,7 @@ public class WaterHealController : Magic
     public float cooldown = 15f;
 
     GameObject player;
+    [SerializeField]
     bool isLearned = true;
     [SerializeField]
     bool isSelected = false;

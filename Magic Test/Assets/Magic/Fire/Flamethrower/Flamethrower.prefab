@@ -48,7 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 10
   damage: 0.2
-  icon: {fileID: 21300000, guid: 11d0fd182786a004ba21f76475e6d100, type: 3}
+  isLearned: 1
+  isSelected: 0
+  icon: {fileID: 21300000, guid: 880b03ac39798f14e84d8514e70b9804, type: 3}
 --- !u!199 &4372573688221074654
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4834,4 +4836,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0.2
-  flame: {fileID: 7646985334529293396}

@@ -4,7 +4,7 @@ public class FlamethrowerController : Magic
 {
     public float cooldown = 20f;
     public float damage = 0.2f;
-    
+    [SerializeField]
     bool isLearned = false;
     [SerializeField]
     bool isSelected = false;

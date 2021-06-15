@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Dummy : MonoBehaviour
+public class Dummy : AbstractEnemy
 {
     float accumulatedDamage;
 
@@ -33,5 +33,16 @@ public class Dummy : MonoBehaviour
         counter = 5f;
         damageText.text = accumulatedDamage.ToString();
     }
-    
+
+    public override void TakeDamage(float damage)
+    {
+        accumulatedDamage += damage;
+        counter = 5f;
+        damageText.text = accumulatedDamage.ToString();
+    }
+
+    public override void Die()
+    {
+        throw new System.NotImplementedException();
+    }
 }

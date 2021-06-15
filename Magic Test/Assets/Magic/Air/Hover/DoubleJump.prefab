@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
-  icon: {fileID: 21300000, guid: 25afc935c6908914bae64e0fbb8a7428, type: 3}
+  isLearned: 1
+  isSelected: 1
+  icon: {fileID: 21300000, guid: f0f8966d0130938478e8c0c366ed4a43, type: 3}

@@ -4819,7 +4819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 15
-  icon: {fileID: 21300000, guid: 4e8a32065d907ce4d9eb6a327c643bdc, type: 3}
+  isSelected: 0
+  icon: {fileID: 21300000, guid: 4a944755fbb2fe54ea66ed4ee5962785, type: 3}
 --- !u!82 &6927605433716628520
 AudioSource:
   m_ObjectHideFlags: 0

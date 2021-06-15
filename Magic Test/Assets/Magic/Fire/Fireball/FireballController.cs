@@ -3,7 +3,7 @@ using UnityEngine;
 public class FireballController : Magic
 {
     public float cooldown = 5f;
-    
+    [SerializeField]
     bool isLearned = true;
     [SerializeField]
     bool isSelected = true;

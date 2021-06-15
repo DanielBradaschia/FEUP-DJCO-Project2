@@ -3,7 +3,7 @@ using UnityEngine;
 public class WallController : Magic
 {
     public float cooldown = 7f;
-    
+    [SerializeField]
     bool isLearned = true;
     [SerializeField]
     bool isSelected = true;
