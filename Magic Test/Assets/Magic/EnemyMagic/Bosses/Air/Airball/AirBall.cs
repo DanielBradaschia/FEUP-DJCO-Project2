@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Tornado : MonoBehaviour
+public class AirBall : MonoBehaviour
 {
 
     public float delay = 2.5f;
@@ -32,12 +32,12 @@ public class Tornado : MonoBehaviour
 
     void OnParticleCollisionEnter(Collision collision)
     {
-        if (collision.collider.gameObject == player) {}
-            //gameObject.SetActive(false);    // deactivate instead of destroy so you could later reactivate (respawn) him
+        if (collision.collider.gameObject == player)
+            gameObject.SetActive(false);    // deactivate instead of destroy so you could later reactivate (respawn) him
     }
     void Explode()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius, ~0 , QueryTriggerInteraction.Collide);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius, ~0, QueryTriggerInteraction.Collide);
 
         foreach (Collider nearbyObj in colliders)
         {
@@ -49,7 +49,30 @@ public class Tornado : MonoBehaviour
             }
         }
 
-        //gameObject.SetActive(false);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
+/*de()
+    {
+        
+        Instantiate(explosion, transform.position, transform.rotation);
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+
+        foreach(Collider nearbyObj in colliders)
+        {
+            if (nearbyObj.gameObject.tag == "Enemy")
+            {
+                nearbyObj.gameObject.GetComponent<AbstractEnemy>().TakeDamage(explosionDamage);
+            }
+
+            Rigidbody rb = nearbyObj.GetComponent<Rigidbody>();
+            if(rb != null)
+            {
+                rb.AddExplosionForce(force, transform.position, radius);
+            }
+        }
+        
+        Destroy(gameObject);
+    }
+}*/

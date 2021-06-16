@@ -16,7 +16,7 @@ MonoBehaviour:
     Boss.bank
   Name: Fire Boss
   StudioPath: bank:/Fire Boss
-  lastModified: 637573811421085324
+  lastModified: 637574582601109496
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637573811421205007
+  lastModified: 637574582601119464
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -180,7 +180,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637573811421334961
+  lastModified: 637574582601119464
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -226,7 +226,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 665415585025222347}
+  - {fileID: 6360600167595758709}
   MinDistance: 0
   MaxDistance: 0
   Length: 1718
@@ -250,7 +250,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 2395003750894931706}
+  - {fileID: 6518413903139449590}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
     Boss.bank
   Name: Earth Boss
   StudioPath: bank:/Earth Boss
-  lastModified: 637573811420945711
+  lastModified: 637574582601099518
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -402,7 +402,7 @@ MonoBehaviour:
   - {fileID: -7592909840378813539}
   StringsBanks:
   - {fileID: -4534876199676705060}
-  stringsBankWriteTime: 637573811421334961
+  stringsBankWriteTime: 637574582601119464
   cacheVersion: 6
 --- !u!114 &665415585025222347
 MonoBehaviour:
@@ -440,7 +440,7 @@ MonoBehaviour:
     Boss.bank
   Name: Air Boss
   StudioPath: bank:/Air Boss
-  lastModified: 637573811420794163
+  lastModified: 637574582601099518
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -585,7 +585,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Menu.bank
   Name: Menu
   StudioPath: bank:/Menu
-  lastModified: 637573811421644137
+  lastModified: 637574582601229462
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -605,7 +605,7 @@ MonoBehaviour:
     Boss.bank
   Name: Water Boss
   StudioPath: bank:/Water Boss
-  lastModified: 637573811421953014
+  lastModified: 637574582601249456
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -787,6 +787,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6360600167595758709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dying/Random Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Random Pitch Shift
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &6518413903139449590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6864075970922658874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,7 +974,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637573811421813378
+  lastModified: 637574582601249456
   LoadResult: 0
   FileSizes: []
   Exists: 1
