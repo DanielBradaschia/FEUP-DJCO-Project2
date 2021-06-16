@@ -5320,12 +5320,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59b8d85c065e4c47bbc2c4a0bcec710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDuration: 1
   tornado: {fileID: 1939506937964315037, guid: cfab62242db57fc459ac1c41bc2aa87b, type: 3}
   barrier: {fileID: 7746155494028617029, guid: db06cdf1829e7a94aa07dac338d064b8, type: 3}
   health: 2000
   timeBetweenAttacks: 5
   attackRange: 75
   barrierCooldown: 10
+--- !u!95 &468414338
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468414336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd70282eb4efc764494df10f650b61b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &470101119
 GameObject:
   m_ObjectHideFlags: 0

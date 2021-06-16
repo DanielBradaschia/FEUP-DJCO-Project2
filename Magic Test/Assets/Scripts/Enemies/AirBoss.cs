@@ -3,6 +3,8 @@ using UnityEngine.AI;
 
 public class AirBoss : AbstractEnemy
 {
+    Animator anim;
+    public float attackDuration = 1f;
 
     public GameObject tornado;
     public GameObject barrier;
@@ -19,6 +21,11 @@ public class AirBoss : AbstractEnemy
     float barrierTimer;
     bool barrierUp = false;
     GameObject instBarrier;
+
+    void Start()
+    {
+        anim = GetComponent<Animator> ();
+    }
 
     void Awake()
     {
@@ -65,15 +72,17 @@ public class AirBoss : AbstractEnemy
         transform.LookAt(player);
         if (!alreadyAttacked)
         {
-            instTornado = Instantiate(tornado, player.position, Quaternion.identity).GetComponent<Rigidbody>();
-            //  instTornadoRigidbody.AddForce(-speed, 0, 0, ForceMode.Impulse);
-            //instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
-            alreadyAttacked = true;
-
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-            //instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
-
+            anim.SetBool("attack", true);
+            Invoke(nameof(Stop), attackDuration);
+            //Invoke(nameof(InstatiateTornado), attackDuration/2);
+            InstatiateTornado();
         }
+    }
+
+    private void Stop()
+    {
+        Debug.Log("stop animation");
+        anim.SetBool("attack", false);
     }
 
     private void ResetAttack() {
@@ -82,11 +91,23 @@ public class AirBoss : AbstractEnemy
 
     }
 
+    private void InstatiateTornado()
+    {
+        instTornado = Instantiate(tornado, player.position, Quaternion.identity).GetComponent<Rigidbody>();
+        //  instTornadoRigidbody.AddForce(-speed, 0, 0, ForceMode.Impulse);
+        //instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
+        alreadyAttacked = true;
+
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        //instTornado.AddForce(transform.forward * 500f, ForceMode.Impulse);
+    }
+
     private void BarrierUp() 
     {
         if(!barrierUp)
         {
-            Debug.Log("barrier up");
+            anim.SetBool("attack", true);
+            Invoke(nameof(Stop), attackDuration);
             instBarrier = (GameObject) Instantiate(barrier, transform.position + new Vector3(0, 12, 0), Quaternion.identity);
             barrierUp = true;
         }
@@ -96,7 +117,6 @@ public class AirBoss : AbstractEnemy
     {
         if(barrierUp && instBarrier)
         {
-            Debug.Log("barrier down");
             Destroy(instBarrier);
             instBarrier = null;
             barrierUp = false;
