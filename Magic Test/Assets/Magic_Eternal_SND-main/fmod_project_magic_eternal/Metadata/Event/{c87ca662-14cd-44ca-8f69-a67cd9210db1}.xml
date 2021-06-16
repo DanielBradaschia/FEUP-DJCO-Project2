@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{c87ca662-14cd-44ca-8f69-a67cd9210db1}">
 		<property name="name">
-			<value>Fire Ball</value>
+			<value>Flames</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -59,7 +59,7 @@
 			<destination>{ec706353-c934-4e6e-8c92-a3ceb0524e4d}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{23f57ed8-2ad1-4972-b481-416da5cc2dba}</destination>
+			<destination>{f473bdb1-2704-4391-b0b9-0f6d8de3a070}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{9f95bf3f-41cd-467c-b2e2-1319039eaa31}" />
@@ -90,7 +90,11 @@
 			<destination>{a411ceaf-9f79-45a3-b692-e8836dc65cf4}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{1cb373d2-50e3-4e93-ba12-d7630dcbe5e9}" />
+	<object class="MultiSound" id="{1cb373d2-50e3-4e93-ba12-d7630dcbe5e9}">
+		<relationship name="sounds">
+			<destination>{ebd86d2c-3225-4939-8617-646a9e8d4c60}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{ccbaef9b-7f34-4d92-a4f5-e1c9345fa13d}">
 		<relationship name="effects">
 			<destination>{7c542395-5494-4485-a819-2ed36935f1a4}</destination>
@@ -118,6 +122,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f3f28b9f-9f33-4657-ae17-e241013a75dd}" />
+	<object class="SingleSound" id="{ebd86d2c-3225-4939-8617-646a9e8d4c60}">
+		<relationship name="audioFile">
+			<destination>{d8894aea-33bd-40e4-a922-3203f3400bed}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{7c542395-5494-4485-a819-2ed36935f1a4}" />
 	<object class="MixerBusEffectChain" id="{b8e20f0a-7fbd-4cdf-a6e3-d599fcf44b4c}">
 		<relationship name="effects">

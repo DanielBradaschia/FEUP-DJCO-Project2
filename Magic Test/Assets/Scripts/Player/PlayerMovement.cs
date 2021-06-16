@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         movingSideways = Input.GetAxisRaw("Horizontal");
 
         animator.SetFloat("Forward", movingForward);
-        //animator.SetFloat("Sideways", movingSideways);
+        animator.SetFloat("Sideways", movingSideways);
 
         Vector3 input = new Vector3(movingSideways, 0, movingForward);
         input = input.normalized;

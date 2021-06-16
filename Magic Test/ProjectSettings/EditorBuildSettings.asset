@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Title_Screen.unity
     guid: 76c0fe25f1a8a3c4db28b892ef2fe4a3
   - enabled: 1
-    path: Assets/Scenes/Air Level.unity
+    path: Assets/Scenes/Hub.unity
+    guid: bda6e16b4fa585a429d482765b3a116b
+  - enabled: 1
+    path: Assets/Scenes/Air_Level.unity
     guid: 59e97ee941512e1409b4f10eec628e73
   m_configObjects: {}

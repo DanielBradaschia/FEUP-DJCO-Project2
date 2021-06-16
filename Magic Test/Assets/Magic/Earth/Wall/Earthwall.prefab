@@ -581,6 +581,8 @@ GameObject:
   - component: {fileID: 1696184980937221215}
   - component: {fileID: 4792597168351406109}
   - component: {fileID: -5656731243441465066}
+  - component: {fileID: 2648884356367139125}
+  - component: {fileID: 7433715741725684273}
   m_Layer: 0
   m_Name: Earthwall
   m_TagString: Untagged
@@ -641,6 +643,52 @@ MonoBehaviour:
   isLearned: 1
   isSelected: 0
   icon: {fileID: 21300000, guid: d9acdde4e5d787b428e668648b268e1a, type: 3}
+--- !u!114 &2648884356367139125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524251130483860020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character Actions/Wall Build
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &7433715741725684273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524251130483860020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character Actions/Wall or Shield Destroy
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7024597851469897103
 GameObject:
   m_ObjectHideFlags: 0
