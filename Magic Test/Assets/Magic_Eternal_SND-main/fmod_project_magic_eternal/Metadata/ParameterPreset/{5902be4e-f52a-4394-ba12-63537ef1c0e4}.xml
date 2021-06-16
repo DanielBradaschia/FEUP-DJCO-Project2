@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{5902be4e-f52a-4394-ba12-63537ef1c0e4}">
+		<property name="name">
+			<value>Health</value>
+		</property>
+		<relationship name="folder">
+			<destination>{48814c71-099c-47d8-8a89-5d69b80e4908}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5a839531-3da8-48e1-becb-6ec752046a09}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5a839531-3da8-48e1-becb-6ec752046a09}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{ad6f4ef3-4538-4d7e-93d7-f556a4d9abb5}</destination>
+		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{ad6f4ef3-4538-4d7e-93d7-f556a4d9abb5}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cursorPosition</value>
+		</property>
+		<property name="initialValue">
+			<value>-100</value>
+		</property>
+		<property name="attackTime">
+			<value>57.6923409</value>
+		</property>
+		<property name="peakValue">
+			<value>-2.22222137</value>
+		</property>
+		<property name="releaseTime">
+			<value>596.15387</value>
+		</property>
+		<property name="finalValue">
+			<value>-100</value>
+		</property>
+	</object>
+</objects>

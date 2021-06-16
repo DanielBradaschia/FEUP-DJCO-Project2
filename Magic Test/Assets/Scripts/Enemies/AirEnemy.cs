@@ -1,4 +1,6 @@
 using UnityEngine;
+using FMODUnity;
+
 
 public class AirEnemy : AbstractEnemy
 {
@@ -18,6 +20,9 @@ public class AirEnemy : AbstractEnemy
     Transform[] moveSpots;
     [SerializeField]
     float projectileSpeed = 20f;
+
+    [SerializeField]
+    AudioSource[] attackAudio;
 
     int randomSpot;
     float attackTimer;
@@ -73,6 +78,8 @@ public class AirEnemy : AbstractEnemy
 
         if (attackTimer <= 0)
         {
+            int r = Random.Range(0, attackAudio.Length);
+            attackAudio[r].Play();
             GameObject bulletClone = Instantiate(bullet);
             bulletClone.transform.position = FirePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(eye.transform.rotation.x, gameObject.transform.rotation.y, 0f);

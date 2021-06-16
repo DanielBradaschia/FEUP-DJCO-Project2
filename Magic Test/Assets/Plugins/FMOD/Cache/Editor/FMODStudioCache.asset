@@ -16,10 +16,34 @@ MonoBehaviour:
     Boss.bank
   Name: Fire Boss
   StudioPath: bank:/Fire Boss
-  lastModified: 637573853299325812
+  lastModified: 637594688201569844
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8835314725908801460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Low Health
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Low Health
+  guid: c8abc1795869454eb0b1e44da106ae5d
+  Banks:
+  - {fileID: -7592909840378813539}
+  - {fileID: 8816873209914222166}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8619217131229013422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,6 +65,26 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &-8587903025758604985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-8504723126006637144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +185,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637573853299335810
+  lastModified: 637594688201649911
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -165,6 +209,98 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-6979796838581748673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minions/Dying
+  m_EditorClassIdentifier: 
+  Path: event:/Minions/Dying
+  guid: 6e416ca95b3086489ef6ca78120b6760
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6220756118027363785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minions/Projectile
+  m_EditorClassIdentifier: 
+  Path: event:/Minions/Projectile
+  guid: ae60aa27ea08fa41a3a6b8d50c449a11
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5793193303877860239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minions/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/Minions/Attack
+  guid: fa80c793cb1b6e45bbef846b3f352610
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5629433488529641218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Wall or Shield Destroy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Wall or Shield Destroy
+  guid: d564e40030bc804e8bbf1ac6901f92ae
+  Banks:
+  - {fileID: 8816873209914222166}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4534876199676705060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,11 +316,11 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637573853299345799
+  lastModified: 637594688201729729
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1902
+    Value: 2756
   Exists: 1
 --- !u!114 &-4339043959032516276
 MonoBehaviour:
@@ -206,6 +342,52 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-3640383416546271649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Flames
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Flames
+  guid: 62a67cc8cd14ca448f69a67cd9210db1
+  Banks:
+  - {fileID: 8816873209914222166}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3184346934423756134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Ambient Sounds/Boss Music
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Ambient Sounds/Boss Music
+  guid: 2544024929002343b47ca4126e57a8ba
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-3154152864346433112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +408,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 1868138340557871377}
+  - {fileID: 889293462603029691}
   MinDistance: 0
   MaxDistance: 0
   Length: 1718
@@ -250,7 +432,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 6260728985331618721}
+  - {fileID: 3000419691045021430}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -274,6 +456,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-1119650474356185606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minions/Voice
+  m_EditorClassIdentifier: 
+  Path: event:/Minions/Voice
+  guid: 8052a69e1ae8574a952581c203577814
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-986721014317401395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +518,7 @@ MonoBehaviour:
     Boss.bank
   Name: Earth Boss
   StudioPath: bank:/Earth Boss
-  lastModified: 637573853299305822
+  lastModified: 637594688201360379
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -379,7 +584,6 @@ MonoBehaviour:
   - {fileID: 8816873209914222166}
   - {fileID: 4514388972071055630}
   EditorEvents:
-  - {fileID: 5905780800005731453}
   - {fileID: 6006733453831225716}
   - {fileID: 2443198958065089736}
   - {fileID: 7406351597715830170}
@@ -390,20 +594,56 @@ MonoBehaviour:
   - {fileID: -3154152864346433112}
   - {fileID: 6975358494462454902}
   - {fileID: 5264121938594999449}
-  - {fileID: 5948218920257359873}
   - {fileID: 6122296401820250370}
   - {fileID: -1872044137492407360}
-  - {fileID: -7822519402283341460}
   - {fileID: -986721014317401395}
   - {fileID: 1773011286991573450}
   - {fileID: 8975743364071209696}
+  - {fileID: 897096943398784041}
+  - {fileID: -3184346934423756134}
+  - {fileID: 1109109107724928533}
+  - {fileID: 4067003919386638188}
+  - {fileID: -6979796838581748673}
+  - {fileID: -1119650474356185606}
+  - {fileID: 6538012369488312388}
+  - {fileID: -6220756118027363785}
+  - {fileID: 6408987310565062767}
+  - {fileID: -5793193303877860239}
+  - {fileID: 7658808143140193422}
+  - {fileID: 52843589620180327}
+  - {fileID: -8835314725908801460}
+  - {fileID: -3640383416546271649}
+  - {fileID: -5629433488529641218}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7592909840378813539}
   StringsBanks:
   - {fileID: -4534876199676705060}
-  stringsBankWriteTime: 637573853299345799
+  stringsBankWriteTime: 637594688201729729
   cacheVersion: 6
+--- !u!114 &52843589620180327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Pause
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Pause
+  guid: 21ba35bed882664693aba1ea7576f007
+  Banks:
+  - {fileID: -7592909840378813539}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &665415585025222347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +659,92 @@ MonoBehaviour:
   Name: Random Pitch Shift
   Min: 0
   Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &889293462603029691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dying/Random Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Random Pitch Shift
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &897096943398784041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Shield Build
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Shield Build
+  guid: 13f6a10c21be1e4ba512b86a675fefbf
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1109109107724928533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minions/Damage
+  m_EditorClassIdentifier: 
+  Path: event:/Minions/Damage
+  guid: 51ecc8c5b104c54abb07174365c743d0
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1352658234034882258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Low Health/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 100
   Default: 0
   ID:
     data1: 0
@@ -440,7 +766,7 @@ MonoBehaviour:
     Boss.bank
   Name: Air Boss
   StudioPath: bank:/Air Boss
-  lastModified: 637573853299275848
+  lastModified: 637594688201255202
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -550,6 +876,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &3000419691045021430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3371497197065207501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +936,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4067003919386638188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Ambient Sounds/Overworld Music
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Ambient Sounds/Overworld Music
+  guid: 60669c07e14b8f44a8daedf3944e4a40
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &4422400302100202856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,7 +974,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Menu.bank
   Name: Menu
   StudioPath: bank:/Menu
-  lastModified: 637573853299485701
+  lastModified: 637594688201948823
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -625,7 +994,7 @@ MonoBehaviour:
     Boss.bank
   Name: Water Boss
   StudioPath: bank:/Water Boss
-  lastModified: 637573853299525674
+  lastModified: 637594688202158755
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -690,8 +1059,9 @@ MonoBehaviour:
   - {fileID: 8816873209914222166}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1352658234034882258}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -847,6 +1217,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &6408987310565062767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Fire ball moving
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Fire ball moving
+  guid: da2050a0d8fdf7439c5904a4930f6eb7
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6518413903139449590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +1255,49 @@ MonoBehaviour:
   Name: Surface
   Min: 0
   Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &6538012369488312388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Actions/Fire ball colliding
+  m_EditorClassIdentifier: 
+  Path: event:/Character Actions/Fire ball colliding
+  guid: 9d64251aab0e184497b716ddccb3e5ef
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6609540910862668406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dying/Random Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Random Pitch Shift
+  Min: 0
+  Max: 1
   Default: 0
   ID:
     data1: 0
@@ -933,6 +1369,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &7658808143140193422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Ambient Sounds/Air
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Ambient Sounds/Air
+  guid: 1473e4bc61c4c44f85b774c530c954ce
+  Banks:
+  - {fileID: -8985207997783884347}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 105853
 --- !u!114 &7811665326800473154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1014,7 +1473,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637573853299505695
+  lastModified: 637594688202068596
   LoadResult: 0
   FileSizes: []
   Exists: 1

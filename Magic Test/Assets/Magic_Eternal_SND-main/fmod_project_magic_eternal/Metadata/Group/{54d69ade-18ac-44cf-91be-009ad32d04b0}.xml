@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{54d69ade-18ac-44cf-91be-009ad32d04b0}">
+		<property name="name">
+			<value>Minions</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{cafe1276-1007-4146-a34c-15d7837e58e3}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{c341b40b-9fe3-4622-8e1d-5c9a22d1be05}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{23f57ed8-2ad1-4972-b481-416da5cc2dba}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{cafe1276-1007-4146-a34c-15d7837e58e3}">
+		<relationship name="effects">
+			<destination>{e1969e88-478a-4de8-820d-b1f43d45d26f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{c341b40b-9fe3-4622-8e1d-5c9a22d1be05}" />
+	<object class="MixerBusFader" id="{e1969e88-478a-4de8-820d-b1f43d45d26f}" />
+</objects>

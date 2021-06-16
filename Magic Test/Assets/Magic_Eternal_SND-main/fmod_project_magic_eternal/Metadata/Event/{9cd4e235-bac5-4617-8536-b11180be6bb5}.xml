@@ -59,7 +59,7 @@
 			<destination>{355f3769-645b-4fe3-8cba-1f1255b408a4}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{23f57ed8-2ad1-4972-b481-416da5cc2dba}</destination>
+			<destination>{73fb5b53-daec-4aea-9b6d-d95e8d95430a}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{9ec55900-ed99-4e12-9777-aa5250b2d782}" />
@@ -142,7 +142,7 @@
 			<value>-10.5</value>
 		</property>
 		<property name="highGain">
-			<value>-22.5</value>
+			<value>-26</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{bdf61e25-0ecc-43da-87ae-a43f559cfe8d}" />

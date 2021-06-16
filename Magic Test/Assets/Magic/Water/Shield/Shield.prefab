@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6232913176655237714}
   - component: {fileID: 2724626158969111510}
   - component: {fileID: 3992065775786473121}
+  - component: {fileID: -8570491991558610677}
+  - component: {fileID: -6654647510026577313}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -96,5 +98,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeActive: 5
   cooldown: 10
+  isLearned: 1
   isSelected: 1
   icon: {fileID: 21300000, guid: 6ef2f2398d2b45b4a9d39e81a62dbc0e, type: 3}
+--- !u!114 &-8570491991558610677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947547925085561166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character Actions/Shield Build
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &-6654647510026577313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947547925085561166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character Actions/Wall or Shield Destroy
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
