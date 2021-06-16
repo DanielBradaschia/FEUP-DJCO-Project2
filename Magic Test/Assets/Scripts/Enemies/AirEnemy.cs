@@ -62,8 +62,7 @@ public class AirEnemy : AbstractEnemy
     void Attack()
     {
         eye.transform.LookAt(player.transform);
-
-        // Debug.DrawLine(eye.transform.position, player.transform.position + new Vector3(0f, 1f, 0f));
+        
         float speed = 5f;
         
         Vector3 targetDirection = player.transform.position - gameObject.transform.position;

@@ -16,8 +16,7 @@ public class AirBall : MonoBehaviour
     void Start()
     {
         countdown = delay;
-        //player = GameObject.Find("Main Character Idle");
-        player = GameObject.FindGameObjectsWithTag("Player")[0];
+        player = GameObject.Find("Player");
     }
 
     void Update()
