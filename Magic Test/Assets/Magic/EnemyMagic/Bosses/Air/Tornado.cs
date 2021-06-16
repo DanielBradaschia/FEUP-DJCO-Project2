@@ -32,8 +32,8 @@ public class Tornado : MonoBehaviour
 
     void OnParticleCollisionEnter(Collision collision)
     {
-        if (collision.collider.gameObject == player)
-            gameObject.SetActive(false);    // deactivate instead of destroy so you could later reactivate (respawn) him
+        if (collision.collider.gameObject == player) {}
+            //gameObject.SetActive(false);    // deactivate instead of destroy so you could later reactivate (respawn) him
     }
     void Explode()
     {
@@ -49,6 +49,7 @@ public class Tornado : MonoBehaviour
             }
         }
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

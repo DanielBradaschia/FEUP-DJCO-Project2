@@ -52,7 +52,7 @@ public class AirBall : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
-de()
+/*de()
     {
         
         Instantiate(explosion, transform.position, transform.rotation);
@@ -74,5 +74,5 @@ de()
         }
         
         Destroy(gameObject);
-    }*/
-}
+    }
+}*/

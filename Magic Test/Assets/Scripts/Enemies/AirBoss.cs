@@ -5,6 +5,7 @@ public class AirBoss : AbstractEnemy
 {
 
     public GameObject tornado;
+    public GameObject barrier;
 
    // public NavMeshAgent agent;
     public float health;
@@ -13,11 +14,17 @@ public class AirBoss : AbstractEnemy
     LayerMask whatIsPlayer;
     bool alreadyAttacked, playerInAttackRange;
     private Rigidbody instTornado;
+    
+    public float barrierCooldown = 10f;
+    float barrierTimer;
+    bool barrierUp = false;
+    GameObject instBarrier;
 
     void Awake()
     {
         whatIsPlayer = 9;
         player = GameObject.Find("Player").transform;
+        barrierTimer = 0;
      //   agent = GetComponent<NavMeshAgent>();
     }
 
@@ -28,6 +35,27 @@ public class AirBoss : AbstractEnemy
         playerInAttackRange = Vector3.Distance(player.position, transform.position) < attackRange;
         if (playerInAttackRange) AttackPlayer();
         if (health <= 1000) timeBetweenAttacks = 3;
+        ToggleBarrier();
+    }
+
+    private void ToggleBarrier()
+    {
+        if(barrierUp && barrierTimer > 0)
+        {
+            barrierTimer -= Time.deltaTime*2;
+        }
+        else if(!barrierUp && barrierTimer < barrierCooldown)
+        {
+            barrierTimer += Time.deltaTime;
+        }
+        else if(barrierUp && barrierTimer <= 0)
+        {
+            BarrierDown();
+        }
+        else if(!barrierUp && barrierTimer >= barrierCooldown)
+        {
+            BarrierUp();
+        }
     }
 
     private void AttackPlayer()
@@ -53,6 +81,27 @@ public class AirBoss : AbstractEnemy
         Destroy(instTornado);
 
     }
+
+    private void BarrierUp() 
+    {
+        if(!barrierUp)
+        {
+            Debug.Log("barrier up");
+            instBarrier = (GameObject) Instantiate(barrier, transform.position + new Vector3(0, 12, 0), Quaternion.identity);
+            barrierUp = true;
+        }
+    }
+
+    private void BarrierDown()
+    {
+        if(barrierUp && instBarrier)
+        {
+            Debug.Log("barrier down");
+            Destroy(instBarrier);
+            instBarrier = null;
+            barrierUp = false;
+        }
+    } 
 
     public override void TakeDamage(float damage)
     {
