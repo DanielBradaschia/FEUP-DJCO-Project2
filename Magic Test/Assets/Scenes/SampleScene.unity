@@ -5679,8 +5679,6 @@ MonoBehaviour:
   animator: {fileID: 1744989784}
   pm: {fileID: 1744989786}
   mc: {fileID: 919132148595243769}
-  heartbeat: {fileID: 919132148595243771}
-  ambient: {fileID: 1645121595}
 --- !u!82 &919132148595243771
 AudioSource:
   m_ObjectHideFlags: 0
