@@ -9,8 +9,8 @@ This project is connected with Magic_Eternal_SND, to keep it updated you must:
 ## TO DO - dev
 - [x] 4 initial magics
 - [x] UI
-- [ ] Air boss (Boza)
-- [ ] Smooth camera movement
+- [x] Air boss (Boza)
+- [x] Smooth camera movement
 
 ### 4 initial magics
 - [x] (Fire) Fireball
@@ -24,13 +24,13 @@ This project is connected with Magic_Eternal_SND, to keep it updated you must:
 - [x] Magic cooldown
 
 ### Air boss Boza
-- [ ] Attacks
-- [ ] Movement
-- [ ] Health Bar (UI)
+- [x] Attacks
+- [x] Movement
+- [x] Health Bar (UI)
 - [ ] Dialogue
 
 ## TO DO - 3D modeler
-- [ ] Player Model
-- [ ] Terrain
-- [ ] Boza Model
-- [ ] Minions (if they exist)
+- [x] Player Model
+- [x] Terrain
+- [x] Boza Model
+- [x] Minions (if they exist)
