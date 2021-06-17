@@ -17,7 +17,8 @@ public class Lectern : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(player.position, lectern.position);
-        if (dist <= 5)
+        Debug.Log(dist);
+        if (dist <= 0.001f)
         {
             text.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
