@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6039305414720238064}
   - component: {fileID: 1767951465112121399}
   - component: {fileID: 6927605433716628520}
+  - component: {fileID: -7726672242461814129}
   m_Layer: 0
   m_Name: WaterEffect
   m_TagString: Untagged
@@ -4819,6 +4820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 15
+  isLearned: 1
   isSelected: 0
   icon: {fileID: 21300000, guid: 4a944755fbb2fe54ea66ed4ee5962785, type: 3}
 --- !u!82 &6927605433716628520
@@ -4917,3 +4919,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7726672242461814129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673492883639014863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1

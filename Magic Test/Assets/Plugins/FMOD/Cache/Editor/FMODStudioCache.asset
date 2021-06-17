@@ -16,7 +16,7 @@ MonoBehaviour:
     Boss.bank
   Name: Fire Boss
   StudioPath: bank:/Fire Boss
-  lastModified: 637595395096477454
+  lastModified: 637595524367946383
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -104,6 +104,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-8226922113407878896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Boss/Shield
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Boss/Shield
+  guid: bb95ebce1ce49b449774ec615c8081b0
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8190682498966457147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +248,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637595395096487446
+  lastModified: 637595524368118502
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -338,6 +361,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5750908766263009741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Boss/Dying
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Boss/Dying
+  guid: 7f9f4c72868955438e223ba91f973df3
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5629433488529641218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,11 +422,11 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637595395096497455
+  lastModified: 637595524368292193
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2756
+    Value: 2924
   Exists: 1
 --- !u!114 &-4339043959032516276
 MonoBehaviour:
@@ -488,7 +534,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 1181505754627587041}
+  - {fileID: 4113772542771347359}
   MinDistance: 0
   MaxDistance: 0
   Length: 1718
@@ -552,7 +598,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6510031760222098277}
+  - {fileID: -81806571635473291}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -638,7 +684,7 @@ MonoBehaviour:
     Boss.bank
   Name: Earth Boss
   StudioPath: bank:/Earth Boss
-  lastModified: 637573853299305822
+  lastModified: 637595524367559579
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -722,6 +768,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-81806571635473291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,7 +828,6 @@ MonoBehaviour:
   - {fileID: 897096943398784041}
   - {fileID: -3184346934423756134}
   - {fileID: 1109109107724928533}
-  - {fileID: 4067003919386638188}
   - {fileID: -6979796838581748673}
   - {fileID: -1119650474356185606}
   - {fileID: 6538012369488312388}
@@ -774,12 +839,17 @@ MonoBehaviour:
   - {fileID: -8835314725908801460}
   - {fileID: -3640383416546271649}
   - {fileID: -5629433488529641218}
+  - {fileID: 766917332566918958}
+  - {fileID: 2545504108481629108}
+  - {fileID: -5750908766263009741}
+  - {fileID: -8226922113407878896}
+  - {fileID: 1525468564342702037}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7592909840378813539}
   StringsBanks:
   - {fileID: -4534876199676705060}
-  stringsBankWriteTime: 637595395096497455
+  stringsBankWriteTime: 637595524368292193
   cacheVersion: 6
 --- !u!114 &52843589620180327
 MonoBehaviour:
@@ -824,6 +894,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &766917332566918958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Boss/Laugh
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Boss/Laugh
+  guid: 05ce3026d0399343ae9ef48562a45c46
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &889293462603029691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,9 +1039,72 @@ MonoBehaviour:
     Boss.bank
   Name: Air Boss
   StudioPath: bank:/Air Boss
-  lastModified: 637595395089433991
+  lastModified: 637595524367400634
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &1525468564342702037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Boss/Bubbles
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Boss/Bubbles
+  guid: cef61b0ab56e0f42bf2b5f81e3a7b530
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1711120927689255959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dying/Random Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Random Pitch Shift
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &1751941913595705023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Low Health/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &1773011286991573450
 MonoBehaviour:
@@ -1056,6 +1212,49 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2516263554336232646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2545504108481629108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Boss/Tornado
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Boss/Tornado
+  guid: 1f60d0b05873784fb58ebfbc102f1dc3
+  Banks:
+  - {fileID: 1404411452169714998}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2887131981803843126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1358,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4113772542771347359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dying/Random Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Random Pitch Shift
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4422400302100202856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,7 +1393,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Menu.bank
   Name: Menu
   StudioPath: bank:/Menu
-  lastModified: 637595395096857184
+  lastModified: 637595524368611057
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1194,7 +1413,7 @@ MonoBehaviour:
     Boss.bank
   Name: Water Boss
   StudioPath: bank:/Water Boss
-  lastModified: 637573853299525674
+  lastModified: 637595524368979957
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1301,7 +1520,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2887131981803843126}
+  - {fileID: 1751941913595705023}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1563,6 +1782,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &6824712579367795382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Low Health/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6864075970922658874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,7 +1910,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 105853
+  Length: 80361
 --- !u!114 &7811665326800473154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,7 +2012,7 @@ MonoBehaviour:
   Path: Assets/Magic_Eternal_SND-main/fmod_project_magic_eternal/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637595395096897156
+  lastModified: 637595524368810899
   LoadResult: 0
   FileSizes: []
   Exists: 1

@@ -21,6 +21,8 @@ public class CharacterBehaviour : MonoBehaviour
     float deathCounter = 5f;
     bool isDead;
 
+    GameObject damageSound;
+
     void Start()
     {
         hp = maxHealth;
@@ -28,6 +30,7 @@ public class CharacterBehaviour : MonoBehaviour
         healing = false;
         isShielded = false;
         isDead = false;
+        damageSound = transform.Find("DamageSound").gameObject;
     }
     
     void Update()
@@ -80,6 +83,9 @@ public class CharacterBehaviour : MonoBehaviour
             hp -= value;
         }
 
+        damageSound.SetActive(true);
+        Invoke(nameof(StopDamageSound), 0.5f);
+
         phb.SetHealth(hp, maxHealth);
     }
 
@@ -93,6 +99,11 @@ public class CharacterBehaviour : MonoBehaviour
     public void SetShield(bool shield)
     {
         isShielded = shield;
+    }
+
+    private void StopDamageSound()
+    {
+        damageSound.SetActive(false);
     }
 
 }

@@ -25,9 +25,14 @@ public class AirBoss : AbstractEnemy
     bool isDead = false;
     float deadTime = 5f;
 
+    GameObject laughSound;
+    GameObject dieSound;
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        laughSound = transform.Find("LaughSound").gameObject;
+        dieSound = transform.Find("DieSound").gameObject;
     }
 
     void Awake()
@@ -137,13 +142,22 @@ public class AirBoss : AbstractEnemy
 
     public override void TakeDamage(float damage)
     {
+        laughSound.SetActive(true);
+        Invoke(nameof(StopLaughSound), 0.5f);
         health -= damage;
         if (health <= 0) Die(); 
     }
 
     public override void Die()
     {
+        laughSound.SetActive(false);
+        dieSound.SetActive(true);
         anim.SetBool("death", true);
         isDead = true;
+    }
+
+    private void StopLaughSound()
+    {
+        laughSound.SetActive(false);
     }
 }

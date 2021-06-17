@@ -34,15 +34,22 @@ public class PlayerMovement : MonoBehaviour
     float movingForward;
     float movingSideways;
 
+    GameObject stepSound;
+    GameObject jumpSound;
+    bool stepSoundBool = false;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         followTarget.localEulerAngles = new Vector3(0, 0, 0);
+        stepSound = transform.Find("StepSound").gameObject;
+        jumpSound = transform.Find("JumpSound").gameObject;
     }
 
     
     void Update()
     {
+        //
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
 
@@ -78,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            jumpSound.SetActive(true);
             animator.SetBool("Jump", true);
             velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -90,15 +98,27 @@ public class PlayerMovement : MonoBehaviour
         lastMove = velocity;
 
         if(velocity.z != 0) {
+            if(controller.isGrounded)
+            {
+                if(!stepSoundBool)
+                {
+                    stepSound.SetActive(true);
+                    Invoke(nameof(StopStep), 0.35f);
+                    stepSoundBool = true;
+                }
+            }
             Quaternion rotation = followTarget.rotation;
             rotation.x = 0;
             rotation. z = 0;
             transform.rotation = rotation;
             followTarget.localEulerAngles = new Vector3(followTarget.localEulerAngles.x, 0, 0);
+        } else {
+            StopStep();
         }
  
         if (controller.isGrounded)
         {
+            jumpSound.SetActive(false);
             animator.SetBool("Jump", false);
             velocityY = 0;
         }
@@ -110,7 +130,6 @@ public class PlayerMovement : MonoBehaviour
             newX = 0;
         }
         followTarget.localEulerAngles += new Vector3(newX, newY, 0) * cameraSpeed;
-        
     }
 
     public void HandleDash()
@@ -121,6 +140,12 @@ public class PlayerMovement : MonoBehaviour
     public void HandleDoubleJump()
     {
         velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
+    }
+
+    private void StopStep()
+    {
+        stepSound.SetActive(false);
+        stepSoundBool = false;
     }
 
 }

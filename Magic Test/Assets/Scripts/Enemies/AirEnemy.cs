@@ -30,6 +30,9 @@ public class AirEnemy : AbstractEnemy
     GameObject player;
     int state;
 
+    GameObject attackSound;
+    GameObject damageSound;
+    GameObject dieSound;
 
     void Start()
     {
@@ -37,10 +40,15 @@ public class AirEnemy : AbstractEnemy
         attackTimer = attackCooldown;
         whatIsPlayer = 9;
         player = GameObject.Find("Player");
+        attackSound = transform.Find("AttackSound").gameObject;
+        damageSound = transform.Find("DamageSound").gameObject;
+        dieSound = transform.Find("DieSound").gameObject;
     }
     
     void Update()
     {
+        damageSound.SetActive(false);
+        attackSound.SetActive(false);
         
         if(attackTimer > 0)
         {
@@ -78,6 +86,7 @@ public class AirEnemy : AbstractEnemy
 
         if (attackTimer <= 0)
         {
+            attackSound.SetActive(true);
             int r = Random.Range(0, attackAudio.Length);
             attackAudio[r].Play();
             GameObject bulletClone = Instantiate(bullet);
@@ -112,6 +121,7 @@ public class AirEnemy : AbstractEnemy
     
     public override void TakeDamage(float damage)
     {
+        damageSound.SetActive(true);
         health -= damage;
         if (health <= 0)
             Die();
@@ -120,6 +130,7 @@ public class AirEnemy : AbstractEnemy
     public override void Die()
     {
         //Fazer cenas para morrer
+        dieSound.SetActive(true);
         Destroy(gameObject);
     }
 }
