@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LoadLevel : MonoBehaviour
 {
 
-    public string level;
+    public int level;
 
     void OnTriggerEnter(Collider collision)
     {

@@ -44,7 +44,7 @@ public class CharacterBehaviour : MonoBehaviour
             mc.enabled = false;
             isDead = true;
             if(deathCounter <= 0)
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
         }
 
         if (healing)

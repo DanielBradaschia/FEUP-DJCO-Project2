@@ -14,11 +14,11 @@ public class ChangeScene : MonoBehaviour
     }
 
     // Update is called once per frame
-private void OnCollisionEnter2D(Collision2D collision)
-{
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
 
-if (collision.gameObject.CompareTag("Player"))
-      SceneManager.LoadScene(Air_Level);
+        if (collision.gameObject.CompareTag("Player"))
+              SceneManager.LoadScene(Air_Level);
 
-}
+    }
 }

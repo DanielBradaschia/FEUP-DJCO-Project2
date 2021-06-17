@@ -51,27 +51,3 @@ public class AirBall : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
-/*de()
-    {
-        
-        Instantiate(explosion, transform.position, transform.rotation);
-
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-
-        foreach(Collider nearbyObj in colliders)
-        {
-            if (nearbyObj.gameObject.tag == "Enemy")
-            {
-                nearbyObj.gameObject.GetComponent<AbstractEnemy>().TakeDamage(explosionDamage);
-            }
-
-            Rigidbody rb = nearbyObj.GetComponent<Rigidbody>();
-            if(rb != null)
-            {
-                rb.AddExplosionForce(force, transform.position, radius);
-            }
-        }
-        
-        Destroy(gameObject);
-    }
-}*/
