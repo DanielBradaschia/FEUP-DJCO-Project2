@@ -7,6 +7,7 @@ public class SpellBook : MonoBehaviour
     public GameObject allMagicsIcons;
 
     MagicManager manager;
+    GameObject player;
 
     Magic[] selectedMagics;
     Magic[] allMagics;
@@ -16,6 +17,7 @@ public class SpellBook : MonoBehaviour
     void Start()
     {
         manager = GameObject.Find("Manager").GetComponent<MagicManager>();
+        player = GameObject.Find("Player");
         selectedMagics = manager.getSelectedMagics();
         allMagics = manager.getAllMagics();
 
@@ -53,6 +55,8 @@ public class SpellBook : MonoBehaviour
 
     public void Resume()
     {
+        player.GetComponent<PlayerMovement>().enabled = true;
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
         gameObject.SetActive(false);

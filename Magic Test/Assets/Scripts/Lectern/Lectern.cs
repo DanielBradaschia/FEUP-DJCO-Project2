@@ -25,16 +25,14 @@ public class Lectern : MonoBehaviour
             {
                 player.GetComponent<PlayerMovement>().enabled = false;
                 spellBookUI.SetActive(true);
+                Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
                 Time.timeScale = 0f;
             }
         }
         else
         {
-            player.GetComponent<PlayerMovement>().enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
             text.SetActive(false);
-            spellBookUI.SetActive(false);
         }
     }
     
