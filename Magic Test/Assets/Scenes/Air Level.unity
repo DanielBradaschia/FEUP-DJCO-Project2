@@ -5313,9 +5313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59b8d85c065e4c47bbc2c4a0bcec710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDuration: 1
   tornado: {fileID: 1939506937964315037, guid: cfab62242db57fc459ac1c41bc2aa87b, type: 3}
   barrier: {fileID: 7746155494028617029, guid: db06cdf1829e7a94aa07dac338d064b8, type: 3}
-  health: 2000
+  health: 1
   timeBetweenAttacks: 5
   attackRange: 75
   barrierCooldown: 10
@@ -6624,7 +6625,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567964114}
   m_LocalRotation: {x: 0.0000000018617383, y: -0.031204341, z: 5.812262e-11, w: 0.99951303}
-  m_LocalPosition: {x: 12.799998, y: 428.64282, z: 214.978}
+  m_LocalPosition: {x: 12.8949995, y: 428.66382, z: 214.907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2144863504}
@@ -16775,7 +16776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578190295}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 20.8, y: 425.23, z: 214.978}
+  m_LocalPosition: {x: 20.895, y: 425.251, z: 214.907}
   m_LocalScale: {x: 27, y: 27, z: 27}
   m_Children:
   - {fileID: 1598853172}
