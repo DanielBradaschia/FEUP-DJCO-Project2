@@ -5,24 +5,25 @@ public class Lectern : MonoBehaviour
     public GameObject text;
     public GameObject spellBookUI;
 
-    Transform player;
+    GameObject player;
     Transform lectern;
     
     void Start()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("Player");
         lectern = gameObject.transform;
     }
     
     void Update()
     {
-        float dist = Vector3.Distance(player.position, lectern.position);
-        Debug.Log(dist);
-        if (dist <= 0.001f)
+        float dist = Vector3.Distance(player.transform.position, lectern.position);
+       
+        if (dist <= 5f)
         {
             text.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
+                player.GetComponent<PlayerMovement>().enabled = false;
                 spellBookUI.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined;
                 Time.timeScale = 0f;
@@ -30,6 +31,7 @@ public class Lectern : MonoBehaviour
         }
         else
         {
+            player.GetComponent<PlayerMovement>().enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             text.SetActive(false);
             spellBookUI.SetActive(false);

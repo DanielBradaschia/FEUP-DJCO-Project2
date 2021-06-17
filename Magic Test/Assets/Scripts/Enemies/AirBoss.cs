@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class AirBoss : AbstractEnemy
 {
@@ -21,6 +22,8 @@ public class AirBoss : AbstractEnemy
     float barrierTimer;
     bool barrierUp = false;
     GameObject instBarrier;
+    bool isDead = false;
+    float deadTime = 5f;
 
     void Start()
     {
@@ -38,11 +41,19 @@ public class AirBoss : AbstractEnemy
 
     void Update()
     {
-        //playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-        playerInAttackRange = Vector3.Distance(player.position, transform.position) < attackRange;
-        if (playerInAttackRange) AttackPlayer();
-        if (health <= 1000) timeBetweenAttacks = 3;
-        ToggleBarrier();
+        if (!isDead)
+        {
+            //playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+            playerInAttackRange = Vector3.Distance(player.position, transform.position) < attackRange;
+            if (playerInAttackRange) AttackPlayer();
+            if (health <= 1000) timeBetweenAttacks = 3;
+            ToggleBarrier();
+        } else { 
+        
+            deadTime -= Time.deltaTime;
+            if(deadTime <= 0)
+                SceneManager.LoadScene(1);
+        }
     }
 
     private void ToggleBarrier()
@@ -133,6 +144,6 @@ public class AirBoss : AbstractEnemy
     public override void Die()
     {
         anim.SetBool("death", true);
-        GetComponent<AirBoss>().enabled = false;
+        isDead = true;
     }
 }
